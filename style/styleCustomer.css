@@ -1,0 +1,219 @@
+
+/* phase for responsive custom */
+@media (max-width: 576px) {
+    
+}
+
+@media (max-width: 768px) {
+   
+}
+
+@media (max-width: 900px) {
+    #header {
+        height: 50px !important;
+        font-size: 14px !important;
+    }
+    .logoHeader img {
+        width: 38px !important;
+        height: 38px !important;
+    }
+    .txtLogo{
+        font-size: 18px !important;
+    }
+}
+
+@media (max-width: 1200px) {
+}
+@media (max-width: 1400px) {
+}
+
+
+
+
+/* phase for header */
+
+*{
+    padding: 0px;
+    margin: 0px;
+    
+}
+.btnContact{
+    background-color: #A81A36;
+}
+.chivo-mono {
+  font-family: "Chivo Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+ .protest-revolution-regular {
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+  }
+  
+.txtLogo{
+    font-size: 40px;
+}
+#header{
+    width: 100%;
+    height: 75px;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: white;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    z-index: 2;
+}
+
+.logoHeader{
+    display: flex;
+    align-items: center;
+}
+.logoHeader img{
+    width: 70px;
+    height: 70px;
+}
+
+.itemHeader{
+    height: 100%;
+
+}
+.itemHeader div{
+    margin-right: 20px;
+    padding: 20px;
+    font-weight: 100;
+
+}
+.menuItem:hover{
+    font-weight: 700;
+    color: #ac4d00;
+    border-bottom: 4px solid #ac4d00;
+}
+.menuItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+}
+
+
+/* phase for content */
+
+.home{
+    width: 100%;
+    height: 900px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    background-color: rgb(184, 100, 100);
+}
+.home img{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    background-size: cover;
+    z-index: -1;
+}
+
+#home_gradient{
+    width: 100%;
+    z-index: 0;
+    opacity: 0.8;
+}
+.content{
+    padding: 0px;
+    width: 100%;
+    z-index: 5;
+}
+.markImgHome{
+    position: absolute;
+    bottom: 0px;
+    overflow: hidden;
+    justify-content: center;
+    z-index: 2;
+    right: 15%;
+}
+.bgMark2{
+    position: absolute;
+    height: 55px;
+    width: 130%;
+    z-index: 1;
+    background-color: rgba(231, 227, 227, 0.4);
+    rotate: 1deg;
+    bottom: -20px;
+}
+
+.bgMark1{
+    position: absolute;
+    height: 55px;
+    width: 130%;
+    z-index: 2;
+    background-color: #F5F5F5;
+    rotate: 359deg;
+    bottom: -20px;
+}
+
+.markBtn{
+    font-family: "Chivo Mono", monospace;
+    display: flex;
+    font-weight: 400;
+    font-size: 24;
+}
+.markBtn div{
+    margin-left: 30px;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.markBtnChoose{
+    font-weight: 700;
+    font-size: 17px;
+    background-color: #6e3c13;
+    color: white
+}
+
+.homeContent{
+    position: absolute;
+    left: 20%;
+    top: 40%;
+}
+.homeContent{
+    color: white;
+    font-size: 16;
+}
+.homeContent-btn{
+    position: relative;
+    background-color: #6e3c13;
+    color: white;
+    font-size: 14px;
+    padding: 10px 35px;
+    width: fit-content;
+    height: fit-content;
+    z-index: 1;
+    font-weight: 400;
+    margin-top: 40px;
+}
+.homeContent-btn img{
+    width: 8px;
+    height: 8px;
+    z-index: 2;
+    right: 5px;
+    top: 5px;
+}
+
+.homeContent-btn:hover{
+    font-size: 16px;
+    background-color: #67370f;
+    transform: scale(1.02);
+}
