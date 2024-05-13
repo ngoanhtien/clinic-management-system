@@ -23,9 +23,23 @@
 }
 
 @media (max-width: 1200px) {
+    
 }
 @media (max-width: 1400px) {
+    #contentDoctor-content{
+        margin-top: 30px;
+        width: 100% !important;
+        
+    }
+    #inforDoctor-bg{
+        display: none !important;
+    }
+    #contentDoctor-imgDoctor{
+        display: flex;
+        justify-content: center !important  ;
+    }
 }
+
 
 
 
@@ -35,26 +49,21 @@
 *{
     padding: 0px;
     margin: 0px;
-    
+
 }
 .btnContact{
     background-color: #A81A36;
 }
-.chivo-mono {
-  font-family: "Chivo Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
+
+  
+.txtLogo{
+    font-size: 40px; 
 }
- .protest-revolution-regular {
-    font-family: "Protest Revolution", sans-serif;
+.txtLogo p{
+    font-family: "Protest Revolution", sans-serif !important;
     font-weight: 600;
     font-style: normal;
     font-size: 30px;
-  }
-  
-.txtLogo{
-    font-size: 40px;
 }
 #header{
     width: 100%;
@@ -62,14 +71,15 @@
     background-color: rgba(255, 255, 255, 0);
     display: flex;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
+
     font-size: 20px;
     color: white;
     position: fixed;
     top: 0px;
     left: 0px;
     transition: background-color 0.5s ease, color 0.5s ease;
-    z-index: 2;
+    z-index: 10;
 }
 
 .logoHeader{
@@ -114,6 +124,9 @@
     position: relative;
     z-index: 1;
     background-color: rgb(184, 100, 100);
+    font-family: Helvetica, sans-serif;
+
+
 }
 .home img{
     width: 100%;
@@ -162,7 +175,7 @@
 }
 
 .markBtn{
-    font-family: "Chivo Mono", monospace;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     font-weight: 400;
     font-size: 24;
@@ -216,4 +229,315 @@
     font-size: 16px;
     background-color: #67370f;
     transform: scale(1.02);
+}
+
+.homeSubTitle{
+    font-size: 50px;
+}
+
+.homeSubTxt{
+    font-size: 20px;
+}
+/* phase about */
+
+#about{
+    padding: 0px;
+    font-family: Helvetica, sans-serif;
+
+    background-color: #F5F5F5;
+
+}
+#about-general{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+
+}
+.about-general-conten1{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: -150px;
+    z-index: 1;
+}
+.about-general-content{
+    position: relative;
+    background-color: #F5F5F5;
+
+}
+.about-general-conten1 h2{
+    color: #754011;
+}
+#imgBg{
+    display: fixed;
+    z-index: 0;
+    padding-left: 5%;
+}
+.imgBg img{
+    width: 30px;
+    height: 30px;
+
+}
+
+#inforDoctor{
+    margin-top: 100px;
+    margin-left: 5%;
+    position: relative;
+    margin-bottom: 100px;
+
+}
+#contentDoctor-imgDoctor{
+
+}
+#contentDoctor-imgDoctor img{
+    height: 700px;
+    border-radius: 20px;
+    
+}
+#contentDoctor-content{
+    color: black;
+    width: 45%;
+    color: white;
+    background-color: #6e3c13;
+    border-radius: 20px;
+}
+#contentDoctor{
+    z-index: 1;
+    margin-top: 80px;
+}
+#inforDoctor-bg{
+    z-index: 0;
+    border-radius: 20px;
+    background-color: #6e3c13;
+    color: white;
+    height: 850px;
+    width: 80%;
+    position: absolute;
+    right: 0px;
+}
+
+.breakLineWhite{
+    background-color: white;
+    width: 150px;
+    height: 2px;
+}
+
+.breakLineBrown{
+    background-color: #67370f;
+    width: 150px;
+    height: 2px;
+}
+
+.breakColWhite{
+    background-color: white;
+    height: 70%;
+    width: 1px;
+    
+}
+
+.strongNum{
+    color: #67370f;
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.btnBooking{
+    font-size: 20px;
+    color: white;
+    width: 180px;
+    height: 45px;
+    background-color: #6e3c13;
+    border: 1px solid white;
+    transition: 1s ;
+    border-radius: 10px;
+    z-index: 2;
+}
+.btnBooking:hover{
+    background-color: white;
+    color: black;
+    transition: 1s ;
+}
+#about-treatmentMethod{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 200px;
+    width: 80%;
+    font-family: Helvetica, sans-serif;
+
+                   
+}
+#about-treatmentMethod .card{
+    background-color: rgba(216, 215, 215, 0.411);
+    margin-top: 25px;
+
+}
+#about-treatmentMethod .card:hover{
+    background-color: #CA8655;
+    color: white;
+}
+.imgCard{
+    z-index: 1;
+}
+#about-treatmentMethod .card.card-body{
+    position: relative;
+}
+
+
+.imgBgCard{
+    position: absolute;
+    right: -350px;
+    bottom: -350px;
+    z-index: -1;
+    width: 550px;
+    height: 550px;
+}
+.imgBgCard img{
+    width: 100%;
+}
+#about-treatmentMethod .card:hover .imgBgCard{
+    z-index: 0;
+}
+.card{
+    overflow: hidden;
+}
+#register{
+    position: relative;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    top: -100px;
+    font-family: Helvetica, sans-serif;
+
+}
+#register{
+    width: 70%;
+}
+.booking-date-item{
+    width: 72px;
+    height: 58px;
+    background: #f7f7f7;
+    border: 2px solid #f7f7f7;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-right: 10px;
+}
+.booking-date-date{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #484848;
+}
+.booking-date-label{
+    font-size: 12px;
+    color: #a3a3a3;
+    line-height: 16px;
+}
+
+.booking-time-item{
+    width: 100px;
+    height: 58px;
+    background: #f7f7f7;
+    border: 2px solid #f7f7f7;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-right: 10px;
+}
+.booking-time-item:hover{
+    background-color: #FFFFFF;
+    border: 2px#E5A724 solid;
+}
+.booking-date-item:hover{
+    background-color: #FFFFFF;
+    border: 2px#E5A724 solid;
+}
+.booking-time{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #484848;
+}
+input::placeholder {
+    color: rgba(179, 179, 179, 0.9) !important;
+    opacity: 1;
+}
+
+textarea::placeholder {
+    color: rgba(179, 179, 179, 0.9)  !important;
+    opacity: 1;
+}
+input{
+    height: 50px;
+}
+
+.booking-cta-button{
+    width: 220px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 23px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #337ab7;
+    border: 0px;
+}
+
+.booking-cta-button:hover{
+    background-color: #498eca;
+}
+.notification{
+    background-color: #5b5959c0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
+}
+.notification-item{
+    width: 60%;
+    background-color: white;
+    border-radius: 25px;
+    position: relative;
+
+}
+.notification-item .row{
+    padding-left: 50px;
+}
+.notification-item-inforRowTitle{
+    margin-bottom: 10px;
+
+}
+.notification-item-inforRowTitle h5{
+    padding: 0px;
+    margin: 0px;
+}
+.notification-item-inforRowContent {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+.notification-item-inforRowContent p{
+    padding: 0px;
+    margin: 0px;
+}
+.cancel{
+    right: 10px;
+    top: 10px;
+}
+.cancel img{
+    height: 40px;
+    width: 40px;
 }

@@ -2,9 +2,7 @@ $(document).ready(function() {
     //
     //---header---
     //
-
-    // change background and color header when scroll
-    $(window).on('scroll', function() {
+    function checkScroll(){
         var position = $(window).scrollTop();
         //if position of web == 0 
         if (position == 0) {
@@ -19,6 +17,10 @@ $(document).ready(function() {
                 backgroundColor: "rgba(255, 255, 255, 1)",
             });
         }
+    }
+    // change background and color header when scroll
+    $(window).on('scroll', function() {
+        checkScroll();
     });
 
     // change hover menu
@@ -33,6 +35,8 @@ $(document).ready(function() {
             color: "white",
             backgroundColor: "rgba(255, 255, 255, 0)",
         })
+        checkScroll();
+
     })
 
     //
@@ -110,4 +114,40 @@ $(document).ready(function() {
         // Apply height to the container
         $('.home').css('height', height + 'px');
     });
+
+
+// about
+    function rotateImgRuntime() {
+        console.log("Rotating...");
+        $(".imgRotate").animate({rotate: '+=1deg'}, 0);
+    }
+    setInterval(rotateImgRuntime, 80);
+
+// register
+    $(".booking-date-item").click(function(){
+        console.log("booking");
+        $(".booking-date-item").css({backgroundColor: "#f7f7f7", border: "0px"});
+        $(this).css({backgroundColor: "#FFFFFF", border: "2px#E5A724 solid"});
+    })
+    $(".booking-time-item").click(function(){
+        console.log("booking");
+        $(".booking-time-item").css({backgroundColor: "#f7f7f7", border: "0px"});
+
+        $(this).css({backgroundColor: "#FFFFFF", border: "2px#E5A724 solid"});
+    })
+    $("#confirm-apointment1").click(function(){
+        $(".notification").css({display: "flex"});
+    })
+    $("#confirm-apointment2").click(function(){
+        $(".notification").css({display: "none"});
+    })
+    $(".cancel").mouseenter(function(){
+        $(this).children("img").attr("src", "img/iconCancelBlackGray.png");
+    })
+    $(".cancel").mouseleave(function(){
+        $(this).children("img").attr("src", "img/iconCancel.png");
+    })
+    $(".cancel").click(function(){
+        $(".notification").css({display: "none"});
+    })
 });
