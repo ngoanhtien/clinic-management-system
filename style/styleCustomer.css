@@ -1,14 +1,29 @@
 
 /* phase for responsive custom */
-@media (max-width: 576px) {
-    
-}
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
+    .avataReview{
+        left: 0px !important;
+    }
+    .hederReviewInfor{
+        position: relative;
+        left: 60px !important;
+
+    }
+    .itemHeader{
+        display: none !important;
+    }
+    .icontHeder800{
+        display: block;
+    }
    
 }
-
+@media (max-width: 720px) {
+   
+    
+}
 @media (max-width: 900px) {
+   
     #header {
         height: 50px !important;
         font-size: 14px !important;
@@ -23,9 +38,17 @@
 }
 
 @media (max-width: 1200px) {
-    
+    .imgCard img{
+        width: 100%!important;
+        height: auto !important;
+    }
+
 }
-@media (max-width: 1400px) {
+@media (max-width: 1460px) {
+    .review-hide{
+        display: none !important;
+    }
+    
     #contentDoctor-content{
         margin-top: 30px;
         width: 100% !important;
@@ -50,6 +73,9 @@
     padding: 0px;
     margin: 0px;
 
+}
+html body{
+    background-color: #F5F5F5;
 }
 .btnContact{
     background-color: #A81A36;
@@ -85,15 +111,18 @@
 .logoHeader{
     display: flex;
     align-items: center;
-}
+}header
 .logoHeader img{
     width: 70px;
     height: 70px;
+    position: relative;
 }
 
 .itemHeader{
+    display: flex;
     height: 100%;
-
+    position: absolute;
+    right: 70px;
 }
 .itemHeader div{
     margin-right: 20px;
@@ -107,14 +136,56 @@
     border-bottom: 4px solid #ac4d00;
 }
 .menuItem{
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
 
 }
-
-
+.icontHeder800{
+    position: absolute;
+    right: 30px;
+    font-size: 45px;
+    display: none;
+    cursor: pointer;
+    transition: font-size 0.5s;
+}
+.icontHeder800:hover{
+    font-size: 55px;
+}
+.menuSub{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.301);
+    z-index: 19;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.itemHeaderSub{
+    position: absolute;
+    left: 0px;
+    display: block;
+    width: 400px;
+    height: 100%;
+    background-color: white;
+    z-index: 20;
+    height: 100%;
+}
+.menuItemSub:hover{
+    font-weight: 700;
+    background-color: #ac4d00;
+    border-bottom: 4px solid #ac4d00;
+    color: white;
+}
+.menuItemSub{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    color: black;
+}
 /* phase for content */
 
 .home{
@@ -156,12 +227,13 @@
 }
 .bgMark2{
     position: absolute;
-    height: 55px;
-    width: 130%;
+    height: 100px;
+    width: 170%;
     z-index: 1;
     background-color: rgba(231, 227, 227, 0.4);
-    rotate: 1deg;
-    bottom: -20px;
+    rotate: 2deg;
+    bottom: -60px;
+    left: -70px;
 }
 
 .bgMark1{
@@ -170,7 +242,7 @@
     width: 130%;
     z-index: 2;
     background-color: #F5F5F5;
-    rotate: 359deg;
+    rotate: 358deg;
     bottom: -20px;
 }
 
@@ -195,7 +267,11 @@
     background-color: #6e3c13;
     color: white
 }
-
+.markBtnHome{
+    cursor: pointer;
+    width: 50px !important;
+    height: 50px !important;
+}
 .homeContent{
     position: absolute;
     left: 20%;
@@ -206,6 +282,7 @@
     font-size: 16;
 }
 .homeContent-btn{
+    cursor: pointer;
     position: relative;
     background-color: #6e3c13;
     color: white;
@@ -357,47 +434,39 @@
     transition: 1s ;
 }
 #about-treatmentMethod{
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-top: 200px;
-    width: 80%;
+    width: 90%;
     font-family: Helvetica, sans-serif;
-
+    color: #52565E;
                    
 }
 #about-treatmentMethod .card{
-    background-color: rgba(216, 215, 215, 0.411);
+    border: 2px solid #E1E5E6;
+    height: fit-content;
+    padding: 0px;
+    margin: 7px;
+    overflow: hidden;
     margin-top: 25px;
-
+    border-radius: 0px;
 }
-#about-treatmentMethod .card:hover{
-    background-color: #CA8655;
-    color: white;
+#about-treatmentMethod  .card .card-title{
+    font-weight: 700;
+    color: #52565E;
+}
+#about-treatmentMethod  .card .card-text{
+    font-weight: 400;
+    color: #86949B;
 }
 .imgCard{
-    z-index: 1;
-}
-#about-treatmentMethod .card.card-body{
-    position: relative;
-}
-
-
-.imgBgCard{
-    position: absolute;
-    right: -350px;
-    bottom: -350px;
-    z-index: -1;
-    width: 550px;
-    height: 550px;
-}
-.imgBgCard img{
-    width: 100%;
-}
-#about-treatmentMethod .card:hover .imgBgCard{
-    z-index: 0;
-}
-.card{
     overflow: hidden;
+    width: 100%;
+    padding: 0px !important;
+}
+.imgCard img{
+    height: 280px;
+    padding: 0;
 }
 #register{
     position: relative;
@@ -446,6 +515,7 @@
     justify-content: center;
     text-align: center;
     margin-right: 10px;
+    cursor: pointer;
 }
 .booking-time-item:hover{
     background-color: #FFFFFF;
@@ -540,4 +610,82 @@ input{
 .cancel img{
     height: 40px;
     width: 40px;
+}
+#formReg-dateBirth{
+    color: rgb(186, 186, 186) ;
+}
+
+.messgeBox{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 600px;
+    z-index: 11;
+}
+
+#mesSuccessReg{
+    display: none; 
+    justify-content:center ; 
+    position: fixed;
+     bottom: 30px;
+}
+#messWrongReg{
+    display: none; 
+    justify-content:center ; 
+    position: fixed;
+     bottom: 30px;
+}
+.wrongTxt{
+    padding: 0px;
+    margin: 0px;
+    color: red;
+    display: none;
+    font-style: italic;
+    padding-left: 10px;
+}
+
+button input{
+    cursor: pointer;
+}
+.avataReview img{
+    width: 85px;
+    height: 85px;
+    object-fit: cover; /* Đảm bảo ảnh bao phủ toàn bộ vùng chứa mà không bị méo */
+    object-position: center; /* Đặt tâm của ảnh ở trung tâm vùng chứa */
+}
+.starReview img{
+    width: 17px;
+    height: 17px;
+}
+.itemReview{
+    border: 0px !important; 
+    width: 550px; 
+    height: 270px; 
+    overflow: visible; 
+    padding: 25px; 
+}
+.carousel-indicators button{
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important;
+    background-color: rgba(175, 175, 175, 0.384) !important;
+    margin: 7px !important;
+    border: 0px !important;
+}
+.carousel-indicators .active{
+    background-color: #FEB900 !important;
+}
+.quote-icon-yellow {
+    color: rgb(192, 166, 19);
+  }
+  .quote-icon-rotate {
+    display: inline-block;
+    transform: rotate(180deg);
+  }
+.review-hide{
+    display: block;
+}
+.otherDateRegChoose{
+    font-size: 14px !important;
+    font-weight: 700 !important;
 }

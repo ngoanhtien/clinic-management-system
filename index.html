@@ -1,21 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phòng khám Tâm An</title>
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <!-- link file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style\styleCustomer.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="js\scriptCustomer.js"></script>
+    <script src="js/scriptCustomer.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body class="">
-    <div class="d-flex justify-content-between px-5 container-fluid" id="header">
+<body class="container-fluid m-0 p-0">
+    <div class="d-flex align-items-center px-5 container-fluid m-0 p-0" id="header">
             <div class="logoHeader d-flex">
                 <!-- <div>
                     <img src="img\logo2.png">
@@ -24,15 +33,48 @@
                     <p class="m-0 ">Tâm An</p>
                 </div>
             </div>
-            <div class="itemHeader d-flex ">
-                <div class="menuItem">Home</div>
-                <div class="menuItem">Về chúng tôi</div>
-                <div class="menuItem">Đặt lịch Khám</div>
-                <div class="menuItem">Đánh giá</div>
+            <div class="itemHeader">
+                <div class="menuItem">
+                    <a class="nav-link" href="#home">Home</a>
+                </div>
+                <div class="menuItem">
+                    <a class="nav-link" href="#about">Về chúng tôi</a>
+                </div>
+                <div class="menuItem">
+                    <a class="nav-link" href="#registerAll">Đặt lịch Khám</a>
+                </div>
+                <div class="menuItem">
+                    <a class="nav-link" href="#review" >Đánh giá</a>
+                </div>
+                
             </div>
+            <div class="icontHeder800">
+                <i class="bx bx-menu" ></i>
+            </div>
+            
+                
+            
     </div>
-    <div class="content ">
-        <div class="home">
+    <div class="menuSub container-fluid">
+        
+        <div class="itemHeaderSub">
+            <div class="menuItemSub">
+                <a class="nav-link" href="#home">Home</a>
+            </div>
+            <div class="menuItemSub">
+                <a class="nav-link" href="#about">Về chúng tôi</a>
+            </div>
+            <div class="menuItemSub">
+                <a class="nav-link" href="#registerAll">Đặt lịch Khám</a>
+            </div>
+            <div class="menuItemSub">
+                <a class="nav-link" href="#review" >Đánh giá</a>
+            </div>
+        </div> 
+    </div>
+   
+    <div class="content container-fluid m-0 p-0 ">
+        <div class="home" id="home">
             
             <img src="img\gradient.png" id="home_gradient">
             <div class="imgMainHome">
@@ -46,9 +88,9 @@
             <div class="markImgHome">
                 
                 <div class="markBtn ">
-                    <div id="markBtnHome1">01</div>
-                    <div id="markBtnHome2">02</div>
-                    <div id="markBtnHome3">03</div>
+                    <div id="markBtnHome1" class="markBtnHome">01</div>
+                    <div id="markBtnHome2" class="markBtnHome">02</div>
+                    <div id="markBtnHome3" class="markBtnHome">03</div>
                 </div>
                 
             </div>
@@ -58,34 +100,12 @@
                        Tinh hoa y học cổ truyền
                     </div>
                     <div class="homeSubTxt">
-                        Điều trị tận gốc
+                        Điều trị tận gốc, dứt điểm và không để lại di chứng
                     </div>
+                    
 
                 </div>
-                <!-- <div class="homeContent-2">
-                    <div class="homeSubTitle">
-                            Sản phẩm bài thuốc
-                            quý công dụng cao
-
-                    </div>
-                    <div class="homeSubTxt">
-
-                    </div>
-                    <button class="btnContact" id="homeBtnContact">
-
-                    </button>
-                </div>
-                <div class="homeContent-3">
-                    <div class="homeSubTitle">
-                        Nơi điều trị an tâm của mọ nhà
-                    </div>
-                    <div class="homeSubTxt">
-
-                    </div>
-                    <button class="btnContact" id="homeBtnContact">
-
-                    </button>
-                </div> -->
+                
                 <div class="homeContent-btn">
                     <img src="img\iconBtn.png">
                     <btn>Đặt lịch ngay</btn>
@@ -223,244 +243,335 @@ Với 40 năm không ngừng học hỏi, kế thừa, tích luỹ những tinh 
             </div>
             
             <div id="about-treatmentMethod" class="row container-fluid">
-                <div class="col-xxl-3 col-xl-6 d-flex justify-content-center">
-                    <div class="card ">
-                        <img src="img\nhanSam2.jpg" class="imgCard">
-                        <div class="card-body">
-                            <h4 class="card-title">Thuốc đông y</h4>
-                            <p class="card-text">Thuốc Đông y được bào chế từ các loại thảo dược thiên nhiên, có tác dụng điều trị bệnh từ gốc, ít gây tác dụng phụ.</p>
-                            <div class="imgBgCard">
-                                <img src="img\imgBackground.png " class="imgRotate">
-                            </div>
-                        </div>
-                    </div>
+                <div class="container-fluid d-flex justify-content-center align-items-center">
+                    <div style="width: 60px; height: 2px; background-color: #FEB900;"></div>
+                    <h2 class="ms-3 me-3" style="color: #52565E;">Phương pháp điều trị</h2>
+                    <div style="width: 60px; height: 2px; background-color: #FEB900;"></div>
+                    
                 </div>
-
-                <div class="col-xxl-3 col-xl-6 d-flex justify-content-center">
-                    <div class="card ">
-                        <img src="img\bamHuyetImg.jpg" class="imgCard">
-                        <div class="card-body">
-                            <h4 class="card-title">Bấm huyệt</h4>
-                            <p class="card-text">
-								Hỗ trợ, điều trị bệnh không dùng thuốc, thư giãn gân cốt, điều hòa khí huyết, giảm stress mệt mỏi,...
-							</p>
-                            <div class="imgBgCard">
-                                <img src="img\imgBackground.png " class="imgRotate">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xxl-3 col-xl-6 d-flex justify-content-center">
-                    <div class="card ">
-                        <img src="img\vatLyTriLieuImg.jpg" class="imgCard">
-                        <div class="card-body">
-                            <h4 class="card-title">Vật lý trị liệu</h4>
-                            <p class="card-text"> Một phương pháp điều trị nội khoa, hoàn toàn không xâm lấn và đem lại hiệu quả trong điều trị. </p>
-                            <div class="imgBgCard">
-                                <img src="img\imgBackground.png " class="imgRotate">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xxl-3 col-xl-6 d-flex justify-content-center">
-                    <div class="card ">
-                        <img src="img\chamCuuImg.jpg" class="imgCard">
-                        <div class="card-body">
-                            <h4 class="card-title">Châm cứu</h4>
-                            <p class="card-text">
-								Chữa bệnh thông qua cách dùng kim châm vào các huyệt đạo trên cơ thể, nhằm kích thích khí huyết...
-							</p>
-                            <div class="imgBgCard">
-                                <img src="img\imgBackground.png " class="imgRotate">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              
+                <p class="container-fluid d-flex justify-content-center " style="color: #364D59;">Đến với phòng khám chúng tôi, bệnh nhân sẽ được thăm khám bởi bác sĩ Tâm An với bề dày 40 năm kinh nghiệm</p>
     
+                <div class="col-lg-6 d-flex justify-content-center">
+                    <div class="card ">
+                        <div class="card-body row p-0 ">
+                            <div class="col-xl-5 imgCard ">
+                                <img src="img\nhanSam2.jpg" >
+                            </div>
+                            <div class="col-xl-7 d-flex justify-content-between align-items-center p-0 " style="z-index: 1;  height: 280px;">
+                                <div class="p-5">
+                                    <h4 class="card-title">Thuốc đông y</h4>
+                                    <p class="card-text">Thuốc Đông y được bào chế từ các loại thảo dược thiên nhiên, có tác dụng điều trị bệnh từ gốc, ít gây tác dụng phụ.</p>
+                                    <div class="imgBgCard">
+                                </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex justify-content-center">
+                    <div class="card ">
+                        <div class="card-body row p-0 ">
+                            <div class="col-xl-5 imgCard">
+                                <img src="img/bamHuyetImg.jpg" >
+                            </div>
+                            <div class="col-xl-7 d-flex justify-content-between align-items-center p-0 " style="z-index: 1;  height: 280px; " >
+                                <div class="p-5">
+                                    <h4 class="card-title">Bấm huyệt</h4>
+                                    <p class="card-text">Hỗ trợ, điều trị bệnh không dùng thuốc, thư giãn gân cốt, điều hòa khí huyết, giảm stress mệt mỏi,...</p>
+                                    <div class="imgBgCard">
+                                </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex justify-content-center">
+                    <div class="card ">
+                        <div class="card-body row p-0 ">
+                            <div class="col-xl-5 imgCard">
+                                <img src="img\vatLyTriLieuImg.jpg" >
+                            </div>
+                            <div class="col-xl-7 d-flex justify-content-between align-items-center p-0 " style="z-index: 1;  height: 280px;" >
+                                <div class="p-5">
+                                    <h4 class="card-title">Vật lý trị liệu</h4>
+                                    <p class="card-text">Một phương pháp điều trị nội khoa, hoàn toàn không xâm lấn và đem lại hiệu quả trong điều trị.</p>
+                                    <div class="imgBgCard">
+                                </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex justify-content-center">
+                    <div class="card ">
+                        <div class="card-body row p-0 ">
+                            <div class="col-xl-5 imgCard">
+                                <img src="img\chamCuuImg.jpg" >
+                            </div>
+                            <div class="col-xl-7 d-flex justify-content-between align-items-center p-0 " style="z-index: 1;  height: 280px;" >
+                                <div class="p-5">
+                                    <h4 class="card-title">Châm cứu</h4>
+                                    <p class="card-text">Chữa bệnh thông qua cách dùng kim châm vào các huyệt đạo trên cơ thể, nhằm kích thích khí huyết...</p>
+                                    <div class="imgBgCard">
+                                </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="container-fluid overflow-hidden mt-5" style="height: 300px">
-                <img src="img/anh5.jpg" class="img-fluid w-100" alt="Image">
+           
+            
+           
             </div>
             
-            <div id="register" class="container-lg ">
-               
-                <div id="formReg" class="row">
-                    
-                    <div class="col-sm-12 m-0 p-3" style="border-bottom: 1px solid rgba(182, 181, 181, 0.445);">
-                        <h3 style="font-weight: 700; ;">ĐĂNG KÝ KHÁM</h3>
+    </div>
+    <div id="registerAll">
+        <div class="container-fluid overflow-hidden mt-5" style="height: 300px">
+            <img src="img/anh5.jpg" class="img-fluid w-100" alt="Image">
+        </div>
+        <div id="register" class="container-lg ">
+            
+            <div id="formReg" class="row">
+                
+                <div class="col-sm-12 m-0 p-3" style="border-bottom: 1px solid rgba(182, 181, 181, 0.445);">
+                    <h3 style="font-weight: 700; ;">ĐĂNG KÝ KHÁM</h3>
+                </div>
+                
+                <div class="col-lg-6 m-0 p-3 ">
+                    <div class="container-fluid p-3">
+                        <input type="text" class="form-control" placeholder="Họ và tên" id="formReg-name">
+                        <p class="wrongTxt" id="wrongFullName">Họ và tên không hợp lệ!</p>
                     </div>
-                    
-                    <div class="col-lg-6 m-0 p-3 ">
-                        <div class="container-fluid p-3">
-                            <input type="text" class="form-control" placeholder="Họ và tên">
-                            
-                        </div>
-                        <div class="container-fluid p-3">
-                            <div class="input-group">
-                                <input type="text" placeholder="Giới tính" class="form-control" aria-label="Text input with dropdown button" style="border-top-right-radius: 0px; border-bottom-right-radius: 0px;">
-                                <div class="input-group-append">
-                                  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="height: 50px; border-top-left-radius: 0px; border-bottom-left-radius: 0px; color: #DEE2E6; border: #DEE2E6 1px solid;">Giới tính</button>
-                                  <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Nam</a>
-                                    <a class="dropdown-item" href="#">Nữ</a>
-                                </div>
-                                </div>
-                              </div>
-                              
-                        </div>
-                        <div class="container-fluid p-3">
-                            <input type="text" class="form-control" placeholder="Ngày sinh">
-                            
-                        </div>
-                        <div class="container-fluid p-3">
-                            <input type="text" class="form-control" placeholder="Số điện thoại">
-                            
-                        </div>
-                        <div class="container-fluid p-3" >
-                            <input type="text" class="form-control" placeholder="Email" >
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="row container-fluid p-3">
-                            <div class="col-sm-12 ">
-                                <h5 class="mb-3 mt-3" style="font-weight: 600;">Ngày khám(*)</h5>
-                                <div class="d-flex justify-content-start">
-                                        <div class="booking-date-item ">
-                                            <p class="booking-date-date m-0">13/05</p> 
-                                            <p class="booking-date-label m-0">Ngày mai</p>
-                                        </div>
-                                        <div class="booking-date-item ">
-                                            <p class="booking-date-date m-0">13/05</p> 
-                                            <p class="booking-date-label m-0">Ngày mai</p>
-                                        </div>
-                                        <div class="booking-date-item ">
-                                            <p class="booking-date-date m-0">14/05</p> 
-                                            <p class="booking-date-label m-0">Ngày kia</p>
-                                        </div>
-                                    
-                                        <div class="booking-date-item ">
-                                            <p class="booking-date-date m-0" style="font-size: 24px; font-weight: 900;">+</p> 
-                                            <p class="booking-date-label m-0">Ngày khác</p>
-                                        </div>
-                                </div>
-                                
-                            </div>
-                            <div class="col-sm-12">
-                                <h5 class="mb-3 mt-3" style="font-weight: 600;">Ca khám(*)</h5>
-                                <div class="d-flex justify-content-start">
-                                    
-                                    <div class="booking-time-item">
-                                        <p class="booking-time m-0">Ca sáng</p> 
-                                    </div>
-                                
-                                    <div class="booking-time-item">
-                                        <p class="booking-time m-0">Ca chiều</p> 
-                                    </div>
-                            </div>
+                    <div class="row" >
+                        <div class="col-xxl-8 ">
+                            <div class="pe-3 ps-3 pt-2 pb-2">
+                                <input  type="date" name="birthday" 
+                                class="datePicke form-control w-100 pe-2 " id="formReg-dateBirth">
+    
                             </div>
                         </div>
-                        <div class="container-fluid p-3 pt-0">
-                            <textarea class="form-control" placeholder="Triệu chứng" style="height: 185px;"></textarea>
+                        <div class="col-xxl-4 d-flex align-items-center ps-3  pt-2 pb-0" id="formReg-gender">
+                            <div class="form-check pe-2 ">
+                                <input type="radio" class="form-check-input" id="radioNam" name="optradio" value="Nam" checked>Nam
+                            </div>
+                            <div class="form-check ">
+                                <input type="radio" class="form-check-input" id="radioNu" name="optradio" value="Nu">Nữ
+                            </div>                            
                         </div>
+                       
                     </div>
-                    <div class="col-xl-12 d-flex justify-content-center m-0 mt-4 p-3" style="border-top: 1px solid rgba(182, 181, 181, 0.445);">
-                        <button data-step="1" class="booking-cta-button" id="confirm-apointment1">
-                            Xác nhận
-                        </button>
+    
+    
+                    <div class="container-fluid p-3">
+                        <input type="text" class="form-control" placeholder="Email" id="formReg-email">
+                        <p class="wrongTxt" id="wrongEmail">Email không hợp lệ!</p>
+                        
+                    </div>
+                    <div class="container-fluid p-3">
+                        <input type="text" class="form-control" placeholder="Số điện thoại" 
+                        id="formReg-phoneNumber">
+                        <p class="wrongTxt" id="wrongPhone">Số điện thoại không hợp lệ!</p>
+                        
+                    </div>
+                    <div class="container-fluid p-3" >
+                        <input type="text" class="form-control" placeholder="Tiền sử bệnh"
+                         id="formReg-anamnesis">
+    
+                    </div>
+                    <div class="container-fluid p-3" >
+                        <input type="text" class="form-control" placeholder="Địa chỉ" id="formReg-address">
                     </div>
                 </div>
-                <div class="notification container-fluid">
-                    
-                    
-                    <div class="notification-item">
-                        <div class="col-sm-12 m-0 p-3 d-flex justify-content-between" style="border-bottom: 1px solid rgba(182, 181, 181, 0.445);">
-                            <div>
-                                <h2 style="color: #337AB7; font-weight: 700;">Xác nhận thông tin</h2>
+                <div class="col-lg-6">
+                    <div class="row container-fluid p-3">
+                        <div class="col-sm-12 ">
+                            <h5 class="mb-3 mt-3" style="font-weight: 600;">Ngày khám(*)</h5>
+                            <div class="d-flex justify-content-start">
+                                    <div class="booking-date-item ">
+                                        <p class="booking-date-date m-0" 
+                                        id="booking-date-date-today"></p> 
+                                        <p class="booking-date-label m-0">Hôm nay</p>
+                                    </div>
+                                    <div class="booking-date-item ">
+                                        <p class="booking-date-date m-0"
+                                        id="booking-date-date-tomorrow"></p> 
+                                        <p class="booking-date-label m-0">Ngày mai</p>
+                                    </div>
+                                    <div class="booking-date-item " >
+                                        <p class="booking-date-date m-0" 
+                                        id="booking-date-date-afterTomorrow"></p> 
+                                        <p class="booking-date-label m-0">Ngày kia</p>
+                                    </div>
+                                
+                                    <div class="booking-date-item " id="otherDateReg">
+                                        <p class="booking-date-date m-0" style="font-size: 24px; font-weight: 900;" id="otherDateText">+</p> 
+                                        <p class="booking-date-label m-0"
+                                        id="booking-date-date-ortherDate">Ngày khác</p>
+                                        
+                                    </div>
+                                    
                             </div>
-                            <div class="cancel">
-                                <img src="img\iconCancel.png">
+                            <div id="datepicker-container" style="display: none;">
+                                <div id="select-delivery-date-input"> </div>
                             </div>
+                            
                         </div>
-
-                       <div class="row ">
-                            <div class="col-sm-4 pt-3">
-                                <div class="notification-item-inforRowTitle">
-                                    <h5>Khách hàng:</h5>
+                        <div class="col-sm-12">
+                            <h5 class="mb-3 mt-3" style="font-weight: 600;">Ca khám(*)</h5>
+                            <div class="d-flex justify-content-start">
+                                
+                                <div class="booking-time-item">
+                                    <p class="booking-time m-0">Ca sáng</p> 
                                 </div>
-                            </div>
-                            <div class="col-sm-8 pt-3">
-                                <div class="notification-item-inforRowContent">
-                                    <p>Đặng Văn Khánh</p>
+                            
+                                <div class="booking-time-item">
+                                    <p class="booking-time m-0">Ca chiều</p> 
                                 </div>
-                            </div>
-                       </div>
-
-                       <div class="row ">
-                        <div class="col-sm-4 pt-3">
-                            <div class="notification-item-inforRowTitle">
-                                <h5>Giới tính:</h5>
-                            </div>
                         </div>
-                        <div class="col-sm-8 pt-3">
-                            <div class="notification-item-inforRowContent">
-                                <p>Nam</p>
-                            </div>
                         </div>
-                   </div>
-
+                    </div>
+                    <div class="container-fluid p-3 pt-3">
+                        <textarea class="form-control" placeholder="Triệu chứng"
+                         style="height: 202px;" id="formReg-symptom"></textarea>
+                    </div>
+                </div>
+                <div class="col-xl-12 d-flex justify-content-center m-0 mt-4 p-3" style="border-top: 1px solid rgba(182, 181, 181, 0.445);">
+                    <button data-step="1" class="booking-cta-button" id="confirm-apointment1">
+                        Xác nhận
+                    </button>
+                </div>
+            </div>
+            <div class="notification container-fluid">
+                
+                
+                <div class="notification-item">
+                    <div class="col-sm-12 m-0 p-3 d-flex justify-content-between" style="border-bottom: 1px solid rgba(182, 181, 181, 0.445);">
+                        <div>
+                            <h2 style="color: #337AB7; font-weight: 700;">Xác nhận thông tin</h2>
+                        </div>
+                        <div class="cancel">
+                            <img src="img\iconCancel.png">
+                        </div>
+                    </div>
+    
                    <div class="row ">
                         <div class="col-sm-4 pt-3">
                             <div class="notification-item-inforRowTitle">
-                                <h5>Ngày sinh:</h5>
+                                <h5>Khách hàng:</h5>
                             </div>
                         </div>
                         <div class="col-sm-8 pt-3">
-                            <div class="notification-item-inforRowContent">
-                                <p>09/02/2003</p>
+                            <div class="notification-item-inforRowContent" >
+                                <p id="notification-name"></p>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="row ">
-                        <div class="col-sm-4 pt-3">
-                            <div class="notification-item-inforRowTitle">
-                                <h5>Số điện thoại:</h5>
-                            </div>
-                        </div>
-                        <div class="col-sm-8 pt-3">
-                            <div class="notification-item-inforRowContent">
-                                <p>0393511358</p>
-                            </div>
-                        </div>
-                     </div>
-
-                <div class="row ">
+                   </div>
+    
+                   <div class="row ">
                     <div class="col-sm-4 pt-3">
                         <div class="notification-item-inforRowTitle">
-                            <h5>Email:</h5>
+                            <h5>Giới tính:</h5>
                         </div>
                     </div>
                     <div class="col-sm-8 pt-3">
-                        <div class="notification-item-inforRowContent">
-                            <p>dangvankhanh@gmail.com</p>
+                        <div class="notification-item-inforRowContent" >
+                            <p id="notification-gender"></p>
+                        </div>
+                    </div>
+               </div>
+    
+               <div class="row ">
+                    <div class="col-sm-4 pt-3">
+                        <div class="notification-item-inforRowTitle">
+                            <h5>Ngày sinh:</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 pt-3">
+                        <div class="notification-item-inforRowContent" >
+                            <p id="notification-dateBirth"></p>
                         </div>
                     </div>
                 </div>
                 <div class="row ">
                     <div class="col-sm-4 pt-3">
-                        <div class="notification-item-inforRowTitle">
-                            <h5>Triệu chứng:</h5>
+                        <div class="notification-item-inforRowTitle" >
+                            <h5>Tiền sử bệnh</h5>
                         </div>
                     </div>
                     <div class="col-sm-8 pt-3">
-                        <div class="notification-item-inforRowContent">
-                            <p>Đau vùng thượng vị.</p>
+                        <div class="notification-item-inforRowContent" >
+                            <p id="notification-anamnesis"></p>
                         </div>
                     </div>
                 </div>
+    
+                <div class="row ">
+                    <div class="col-sm-4 pt-3">
+                        <div class="notification-item-inforRowTitle">
+                            <h5>Số điện thoại</h5>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 pt-3">
+                        <div class="notification-item-inforRowContent" >
+                            <p id="notification-phoneNumber"></p>
+                        </div>
+                    </div>
+                 </div>
+    
+            <div class="row ">
+                <div class="col-sm-4 pt-3">
+                    <div class="notification-item-inforRowTitle">
+                        <h5>Email:</h5>
+                    </div>
+                </div>
+                <div class="col-sm-8 pt-3">
+                    <div class="notification-item-inforRowContent" >
+                        <p id="notification-email"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-sm-4 pt-3">
+                    <div class="notification-item-inforRowTitle">
+                        <h5>Địa chỉ:</h5>
+                    </div>
+                </div>
+                <div class="col-sm-8 pt-3">
+                    <div class="notification-item-inforRowContent" >
+                        <p id="notification-address"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-sm-4 pt-3">
+                    <div class="notification-item-inforRowTitle">
+                        <h5>Triệu chứng:</h5>
+                    </div>
+                </div>
+                <div class="col-sm-8 pt-3">
+                    <div class="notification-item-inforRowContent" 
+                    id="notification-symptom">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-sm-4 pt-3">
+                    <div class="notification-item-inforRowTitle">
+                        <h5>Thời gian Khám</h5>
+                    </div>
+                </div>
+                <div class="col-sm-8 pt-3">
+                    <div class="notification-item-inforRowContent" id="notification-timeApointment">
+                        <p id="notification-time"></p>
+                    </div>
+                </div>
+            </div>
     
         <div class="col-xl-12 d-flex justify-content-center m-0 mt-4 p-3" style="border-top: 1px solid rgba(182, 181, 181, 0.445);">
                     <button data-step="1" class="booking-cta-button" id="confirm-apointment2">
@@ -470,11 +581,442 @@ Với 40 năm không ngừng học hỏi, kế thừa, tích luỹ những tinh 
             </div>
             </div>
         </div>
+    </div>
+    
+    <div class="container-fluid" id="mesSuccessReg">
+        <div class="d-flex justify-content-center">
+            <div class="alert alert-success messgeBox ">
+               <span><strong>Thành công!</strong> Đăng ký thành công.</span> 
             </div>
-            <div>
+        </div> 
+    </div>
+    <div class="container-fluid" id="messWrongReg">
+        <div class="d-flex justify-content-center">
+            <div class="alert alert-danger messgeBox ">
+                 <span><strong>Lỗi!</strong>  Xin hãy điền đầy đủ thông tin.</span>
+            </div>
+        </div> 
+    </div>
+   <div id="review" style="height: 50px;" ></div>
+    <div class="ps-5 m-5 mt-0 pe-5 pb-5">
+        <div class="container" >
+            <div class="container-fluid d-flex justify-content-center align-items-center">
+                <div style="width: 60px; height: 2px; background-color: #FEB900;"></div>
+                <h2 class="ms-3 me-3" style="color: #52565E;">ĐÁNH GIÁ</h2>
+                <div style="width: 60px; height: 2px; background-color: #FEB900;"></div>
+            </div>
+            <p class="container-fluid d-flex justify-content-center mb-5 pb-3" style="color: #364D59;">Đến với phòng khám chúng tôi, bệnh nhân sẽ được thăm khám bởi bác sĩ Tâm An với bề dày 40 năm kinh nghiệm</p>
+          </div>
+        <div id="demo" class="carousel slide" data-bs-ride="carousel" >
+
+            <div class="carousel-indicators" style="bottom: -70px;">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active ">
+                    <div class="d-flex justify-content-center">
+                        <div class="card itemReview" >
+                            <div class="card-header d-flex" style="background-color: white; border: 0px; position: relative;">
+                                <div class="avataReview" style="position: absolute; left: -60px;">
+                                    <img src="img/nguoi1.jpg" class="img-thumbnail ">
+                                </div>
+                                <div class="ps-4 hederReviewInfor">
+                                    <div>
+                                        <h2 class="m-0">Đặng Văn Khánh</h2>
+                                        <p class="mb-1" style="color: gray;">Giám đốc công ty Trường Hải</p>
+                                    </div>
+                                    <div class="starReview d-flex justify-content-start">
+                                        <img src="img/icon-star-yellow.png">
+                                        <img src="img/icon-star-yellow.png">
+                                        <img src="img/icon-star-yellow.png">
+                                        <img src="img/icon-star-yellow.png">
+                                        <img src="img/icon-star-yellow.png">
                 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left quote-icon-yellow"></i>
+                                    Phòng Khám Tâm An là địa điểm khám chữa bệnh uy tín với hơn 40 năm không ngừng học hỏi, kế thừa, tích luỹ những tinh hoa y học cổ truyền.
+                                    <i class="bi bi-quote quote-icon-yellow quote-icon-rotate"></i>
+                                </p>
+                            </div>
+                          </div>
+                        <div style="width: 100px;" class="review-hide">
+                
+                        </div>
+                        <div class="card itemReview review-hide">
+                            <div class="card-header d-flex" style="background-color: white; border: 0px; position: relative;">
+                                <div class="avataReview" style="position: absolute; left: -60px;">
+                                    <img src="img/nguoi3.jpg" class="img-thumbnail">
+                                </div>
+                                <div class="ps-4 hederReviewInfor">
+                                    <div>
+                                        <h2 class="m-0">Vũ Duy Quang</h2>
+                                        <p class="mb-1" style="color: gray;">Lao công</p>
+                                    </div>
+                                    <div class="starReview d-flex justify-content-start">
+                                        <img src="img/icon-star-yellow.png">
+                                        <img src="img/icon-star-yellow.png">
+                                        <img src="img/icon-star-yellow.png">
+                                        <img src="img/icon-star-yellow.png">
+                                        <img src="img/icon-star-yellow.png">
+                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left quote-icon-yellow"></i>
+                                    Phòng Khám Tâm An là địa điểm khám chữa bệnh uy tín với hơn 40 năm không ngừng học hỏi, kế thừa, tích luỹ những tinh hoa y học cổ truyền.
+                                    <i class="bi bi-quote quote-icon-yellow quote-icon-rotate"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="carousel-item">
+                    <div class=" d-flex justify-content-center">
+                        <div class="card itemReview" >
+                            <div class="card-header d-flex" style="background-color: white; border: 0px; position: relative;">
+                                <div class="avataReview" style="position: absolute; left: -60px;">
+                                    <img src="img/nguoi2.png" class="img-thumbnail ">
+                                </div>
+                                <div class="ps-4 hederReviewInfor">
+                                    <div>
+                                        <h2 class="m-0">Nguyễn Minh Tâm</h2>
+                                        <p class="mb-1" style="color: gray;">Nhân viên văn phòng</p>
+                                    </div>
+                                    <div class="starReview d-flex justify-content-start">
+                                        <img src="img/icon-star-yellow.png">
+                                        <img src="img/icon-star-yellow.png">
+                                        <img src="img/icon-star-yellow.png">
+                                        <img src="img/icon-star-yellow.png">
+                                        <img src="img/icon-star-yellow.png">
+                
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left quote-icon-yellow"></i>
+                                    Phòng Khám Tâm An là địa điểm khám chữa bệnh uy tín với hơn 40 năm không ngừng học hỏi, kế thừa, tích luỹ những tinh hoa y học cổ truyền.
+                                    <i class="bi bi-quote quote-icon-yellow quote-icon-rotate"></i>
+                                </p>
+                            </div>
+                          </div>
+                        <div style="width: 100px;" class="review-hide">
+                
+                        </div>
+                        <div class="card itemReview review-hide">
+                        <div class="card-header d-flex" style="background-color: white; border: 0px; position: relative;">
+                            <div class="avataReview" style="position: absolute; left: -60px;">
+                                <img src="img/nguoi5.jpg" class="img-thumbnail">
+                            </div>
+                            <div class="ps-4 hederReviewInfor">
+                                <div>
+                                    <h2 class="m-0">Ngô Anh tiến</h2>
+                                    <p class="mb-1" style="color: gray;">Công nhân</p>
+                                </div>
+                                <div class="starReview d-flex justify-content-start">
+                                    <img src="img/icon-star-yellow.png">
+                                    <img src="img/icon-star-yellow.png">
+                                    <img src="img/icon-star-yellow.png">
+                                    <img src="img/icon-star-yellow.png">
+                                    <img src="img/icon-star-yellow.png">
+                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                <i class="bi bi-quote quote-icon-left quote-icon-yellow"></i>
+                                Phòng Khám Tâm An là địa điểm khám chữa bệnh uy tín với hơn 40 năm không ngừng học hỏi, kế thừa, tích luỹ những tinh hoa y học cổ truyền.
+                                <i class="bi bi-quote quote-icon-yellow quote-icon-rotate"></i>
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                  
+                </div>
+                <div class="carousel-item">
+                    <div class=" d-flex justify-content-center">
+                        <div class="card itemReview" >
+                            <div class="card-header d-flex" style="background-color: white; border: 0px; position: relative;">
+                                <div class="avataReview" style="position: absolute; left: -60px;">
+                                    <img src="img/nguoi6.jpg" class="img-thumbnail ">
+                                </div>
+                                <div class="ps-4 hederReviewInfor">
+                                    <div>
+                                        <h2 class="m-0">Đào Minh Ngọc</h2>
+                                        <p class="mb-1" style="color: gray;">Nhân viên văn phòng</p>
+                                    </div>
+                                    <div class="starReview d-flex justify-content-start">
+                                        <img src="img/icon-star-yellow.png">
+                                        <img src="img/icon-star-yellow.png">
+                                        <img src="img/icon-star-yellow.png">
+                                        <img src="img/icon-star-yellow.png">
+                                        <img src="img/icon-star-yellow.png">
+                
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left quote-icon-yellow"></i>
+                                    Phòng Khám Tâm An là địa điểm khám chữa bệnh uy tín với hơn 40 năm không ngừng học hỏi, kế thừa, tích luỹ những tinh hoa y học cổ truyền.
+                                    <i class="bi bi-quote quote-icon-yellow quote-icon-rotate"></i>
+                                </p>
+                            </div>
+                          </div>
+                        <div style="width: 100px;" class=" review-hide">
+                
+                        </div>
+                        <div class="card itemReview review-hide">
+                        <div class="card-header d-flex" style="background-color: white; border: 0px; position: relative;">
+                            <div class="avataReview" style="position: absolute; left: -60px;">
+                                <img src="img/nguoi3.jpg" class="img-thumbnail">
+                            </div>
+                            <div class="ps-4 hederReviewInfor">
+                                <div>
+                                    <h2 class="m-0">Nguyễn Minh Quang</h2>
+                                    <p class="mb-1" style="color: gray;">Nhân viên dọn rác</p>
+                                </div>
+                                <div class="starReview d-flex justify-content-start">
+                                    <img src="img/icon-star-yellow.png">
+                                    <img src="img/icon-star-yellow.png">
+                                    <img src="img/icon-star-yellow.png">
+                                    <img src="img/icon-star-yellow.png">
+                                    <img src="img/icon-star-yellow.png">
+                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                <i class="bi bi-quote quote-icon-left quote-icon-yellow"></i>
+                                Phòng Khám Tâm An là địa điểm khám chữa bệnh uy tín với hơn 40 năm không ngừng học hỏi, kế thừa, tích luỹ những tinh hoa y học cổ truyền.
+                                <i class="bi bi-quote quote-icon-yellow quote-icon-rotate"></i>
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="carousel-item ">
+                    <div class="d-flex justify-content-center">
+                        <div class="card itemReview" >
+                            <div class="card-header d-flex" style="background-color: white; border: 0px; position: relative;">
+                                <div class="avataReview" style="position: absolute; left: -60px;">
+                                    <img src="img/nguoi7.jpg" class="img-thumbnail ">
+                                </div>
+                                <div class="ps-4 hederReviewInfor">
+                                    <div>
+                                        <h2 class="m-0">Phùng Nguyễn Huy</h2>
+                                        <p class="mb-1" style="color: gray;">Nhân viên văn phòng</p>
+                                    </div>
+                                    <div class="starReview d-flex justify-content-start">
+                                        <img src="img/icon-star-yellow.png">
+                                        <img src="img/icon-star-yellow.png">
+                                        <img src="img/icon-star-yellow.png">
+                                        <img src="img/icon-star-yellow.png">
+                                        <img src="img/icon-star-yellow.png">
+                
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left quote-icon-yellow"></i>
+                                    Phòng Khám Tâm An là địa điểm khám chữa bệnh uy tín với hơn 40 năm không ngừng học hỏi, kế thừa, tích luỹ những tinh hoa y học cổ truyền.
+                                    <i class="bi bi-quote quote-icon-yellow quote-icon-rotate"></i>
+                                </p>
+                            </div>
+                          </div>
+                        <div style="width: 100px;" class="review-hide">
+                
+                        </div>
+                        <div class="card itemReview review-hide">
+                        <div class="card-header d-flex" style="background-color: white; border: 0px; position: relative;">
+                            <div class="avataReview" style="position: absolute; left: -60px;">
+                                <img src="img/nguoi8.jpg" class="img-thumbnail">
+                            </div>
+                            <div class="ps-4 hederReviewInfor">
+                                <div>
+                                    <h2 class="m-0">Nguyễn Mạnh Cường</h2>
+                                    <p class="mb-1" style="color: gray;">Nhân viên dọn rác</p>
+                                </div>
+                                <div class="starReview d-flex justify-content-start">
+                                    <img src="img/icon-star-yellow.png">
+                                    <img src="img/icon-star-yellow.png">
+                                    <img src="img/icon-star-yellow.png">
+                                    <img src="img/icon-star-yellow.png">
+                                    <img src="img/icon-star-yellow.png">
+                
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                <i class="bi bi-quote quote-icon-left quote-icon-yellow"></i>
+                                Phòng Khám Tâm An là địa điểm khám chữa bệnh uy tín với hơn 40 năm không ngừng học hỏi, kế thừa, tích luỹ những tinh hoa y học cổ truyền.
+                                <i class="bi bi-quote quote-icon-yellow quote-icon-rotate"></i>
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                   
+                </div>
             </div>
         </div>
-        
+    </div>
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+<div class="container-fluid p-0 m-0">
+    <!-- Footer -->
+    <footer
+            class="text-center text-lg-start text-white"
+            style="background-color: #45526e"
+            >
+      <!-- Grid container -->
+      <div class="container p-4 hederReviewInfor pb-0">
+        <!-- Section: Links -->
+        <section class="">
+          <!--Grid row-->
+          <div class="row">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h4 class="text-uppercase mb-4 font-weight-bold">
+                Tâm An
+              </h4>
+              <p>
+                Phòng Khám Tâm An là địa điểm khám chữa bệnh uy tín với hơn 40 năm không ngừng học hỏi, kế thừa, tích luỹ những tinh hoa y học cổ truyền. 
+              </p>
+            </div>
+            <!-- Grid column -->
+  
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h4 class="text-uppercase mb-4 font-weight-bold">LỊCH LÀM VIỆC</h4>
+              <p >
+                Làm việc 7 Ngày/Tuần
+              </p>
+              <p >
+                Sáng: từ 8h - 12h
+              </p>
+              <p>
+                Chiều: từ 13h30 - 17h30
+              </p>
+              
+            </div>
+            <!-- Grid column -->
+  
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+              <h4 class="text-uppercase mb-4 font-weight-bold">
+                PHƯƠNG PHÁP
+              </h4>
+              <p >
+                Châm cứu
+              </p>
+              <p >
+                Bấm Huyệt
+              </p>
+              <p >
+                Vật lý trị liệu
+              </p>
+              <p >
+                Thuốc đông y
+              </p>
+            </div>
+  
+            <!-- Grid column -->
+            <hr class="w-100 clearfix d-md-none" />
+  
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+              <p><i class="fas fa-home mr-3"></i> Hà Nội, Việt Nam</p>
+              <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+              <p><i class="fas fa-phone mr-3"></i> +84 234 567 88</p>
+              <p><i class="fas fa-print mr-3"></i> +84 234 567 89</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!--Grid row-->
+        </section>
+        <!-- Section: Links -->
+  
+        <hr class="my-3">
+  
+        <!-- Section: Copyright -->
+        <section class="p-3 pt-0">
+          <div class="row d-flex align-items-center">
+            <!-- Grid column -->
+            <div class="col-md-7 col-lg-8 text-center text-md-start">
+              <!-- Copyright -->
+              <div class="p-3">
+                © 2020 Copyright:
+                <a class="text-white" href="http://127.0.0.1:5500/index.html"
+                   >taman.com</a
+                  >
+              </div>
+              <!-- Copyright -->
+            </div>
+            <!-- Grid column -->
+  
+            <!-- Grid column -->
+            <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+              <!-- Facebook -->
+              <a
+                 class="btn btn-outline-light btn-floating m-1"
+                 class="text-white"
+                 role="button"
+                 ><i class="fab fa-facebook-f"></i
+                ></a>
+  
+              <!-- Twitter -->
+              <a
+                 class="btn btn-outline-light btn-floating m-1"
+                 class="text-white"
+                 role="button"
+                 ><i class="fab fa-twitter"></i
+                ></a>
+  
+              <!-- Google -->
+              <a
+                 class="btn btn-outline-light btn-floating m-1"
+                 class="text-white"
+                 role="button"
+                 ><i class="fab fa-google"></i
+                ></a>
+  
+              <!-- Instagram -->
+              <a
+                 class="btn btn-outline-light btn-floating m-1"
+                 class="text-white"
+                 role="button"
+                 ><i class="fab fa-instagram"></i
+                ></a>
+            </div>
+            <!-- Grid column -->
+          </div>
+        </section>
+        <!-- Section: Copyright -->
+      </div>
+      <!-- Grid container -->
+    </footer>
+    <!-- Footer -->
+  </div>
+  <!-- End of .container -->
 </body>
 </html>
