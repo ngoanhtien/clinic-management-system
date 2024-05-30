@@ -15,11 +15,9 @@ $(document).ready(function() {
         var screenWidth = $(window).width();
         if(screenWidth > 800){
             $(".icontHeder800").css({display: "none"});
-        console.log("in");
 
         }
         else{
-        console.log("out");
 
             checkScroll();
         }
@@ -33,6 +31,9 @@ $(document).ready(function() {
                 color: "white",
                 backgroundColor: "rgba(255, 255, 255, 0)",
             });
+            $(".menuItem a").css({
+                color: "white",
+            })
             $(".icontHeder800").css({display: "none"})
         } else // if position != 0
         {
@@ -40,6 +41,9 @@ $(document).ready(function() {
                 color: "black",
                 backgroundColor: "rgba(255, 255, 255, 1)",
             });
+            $(".menuItem a").css({
+                color: "black",
+            })
             if(screenWidth < 801)
                 {
                     $(".icontHeder800").css({display: "block"})
@@ -61,6 +65,9 @@ $(document).ready(function() {
             color: "black",
             backgroundColor: "rgba(255, 255, 255, 1)",
         })
+        $(".menuItem a").css({
+            color: "black",
+        })
         if(screenWidth < 801)
             {
                 $(".icontHeder800").css({display: "block"})
@@ -72,6 +79,9 @@ $(document).ready(function() {
         $(this).css({
             color: "white",
             backgroundColor: "rgba(255, 255, 255, 0)",
+        })
+        $(".menuItem a").css({
+            color: "white",
         })
         $(".icontHeder800").css({display: "none"})
 
@@ -97,7 +107,7 @@ $(document).ready(function() {
     $(".imgMainHome img").hide();
     $("#img_home1").show().css({
         filter: "none",
-        transform: "scale(1.2)",
+        transform: "scale(1)",
         transition: "transform 6s ease"
     });
     $("#markBtnHome1").addClass("markBtnChoose");
@@ -105,8 +115,8 @@ $(document).ready(function() {
     var count = 1;
     function slideImg() {
         $(".imgMainHome img").css({
-            transform: "scale(1)",
-            transition: "transform 0s ease"
+            transform: "scale(1.2)",
+            transition: "transform 0s ease "
         });
         $("#img_home" + count).hide();
         if(count == 3)
@@ -120,8 +130,8 @@ $(document).ready(function() {
         $("#img_home" + count).show();
         $("#img_home" + count).css({
             filter: "none",
-            transform: "scale(1.2)",
-            transition: "transform 6s ease"
+            transform: "scale(1) ",
+            transition: "transform 6s ease "
         })
       
         $(".markBtn div").removeClass("markBtnChoose");

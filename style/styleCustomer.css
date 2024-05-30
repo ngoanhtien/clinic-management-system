@@ -130,9 +130,9 @@ html body{
     font-weight: 100;
 
 }
-.menuItem:hover{
+.menuItem a:hover{
     font-weight: 700;
-    color: #ac4d00;
+    color: #ac4d00 !important;
     border-bottom: 4px solid #ac4d00;
 }
 .menuItem{
@@ -141,7 +141,9 @@ html body{
     align-items: center;
     justify-content: center;
     height: 100%;
-
+}
+.menuItem a{
+    color: white;
 }
 .icontHeder800{
     position: absolute;
@@ -172,13 +174,12 @@ html body{
     z-index: 20;
     height: 100%;
 }
-.menuItemSub:hover{
+.menuItemSub a:hover{
     font-weight: 700;
     background-color: #ac4d00;
-    border-bottom: 4px solid #ac4d00;
     color: white;
 }
-.menuItemSub{
+.menuItemSub a{
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -363,12 +364,16 @@ html body{
 
 }
 #contentDoctor-imgDoctor{
+    overflow: hidden;
+    height: 700px;
+    border-radius: 20px;
 
 }
 #contentDoctor-imgDoctor img{
     height: 700px;
+
     border-radius: 20px;
-    
+
 }
 #contentDoctor-content{
     color: black;
@@ -449,7 +454,7 @@ html body{
     margin: 7px;
     overflow: hidden;
     margin-top: 25px;
-    border-radius: 0px;
+    border-radius: 15px;
 }
 #about-treatmentMethod  .card .card-title{
     font-weight: 700;
