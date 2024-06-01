@@ -112,8 +112,13 @@ $(document).ready(function() {
     });
     $("#markBtnHome1").addClass("markBtnChoose");
 
+    function homeContentAnimate(){
+            $(".homeContent").fadeOut(0);
+             $(".homeContent").fadeIn(2000);
+    }
     var count = 1;
     function slideImg() {
+        homeContentAnimate()
         $(".imgMainHome img").css({
             transform: "scale(1.2)",
             transition: "transform 0s ease "
@@ -133,6 +138,7 @@ $(document).ready(function() {
             transform: "scale(1) ",
             transition: "transform 6s ease "
         })
+       
       
         $(".markBtn div").removeClass("markBtnChoose");
         $("#markBtnHome" + count).addClass("markBtnChoose");

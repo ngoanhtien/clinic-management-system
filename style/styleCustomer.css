@@ -86,8 +86,7 @@
     }
     .markBtn div{
         margin-left: 15px !important;
-        height: 20px !important;
-        width: 20px !important;
+
         
     }
     .markBtnChoose{
@@ -360,17 +359,16 @@ html body{
     background-color: rgba(231, 227, 227, 0.4);
     rotate: 2deg;
     bottom: -60px;
-    left: -70px;
 }
 
 .bgMark1{
     position: absolute;
-    height: 55px;
+    height: 65px;
     width: 130%;
     z-index: 2;
     background-color: #F5F5F5;
     rotate: 358deg;
-    bottom: -20px;
+    bottom: -25px;
 }
 
 .markBtn{
@@ -381,8 +379,6 @@ html body{
 }
 .markBtn div{
     margin-left: 30px;
-    height: 45px;
-    width: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -396,13 +392,14 @@ html body{
 }
 .markBtnHome{
     cursor: pointer;
-    width: 50px ;
-    height: 50px ;
+    width: 55px ;
+    height: 55px ;
 }
 .homeContent{
     position: absolute;
     left: 20%;
     top: 40%;
+    display: block;
 }
 .homeContent{
     color: white;
