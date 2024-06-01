@@ -4,7 +4,7 @@ $(document).ready(function() {
     //
     var screenWidth = $(window).width();
 
-    if(screenWidth > 800){
+    if(screenWidth > 870){
         $(".icontHeder800").css({display: "none"});
 
     }
@@ -13,7 +13,7 @@ $(document).ready(function() {
     }
     $(window).on('resize', function() {
         var screenWidth = $(window).width();
-        if(screenWidth > 800){
+        if(screenWidth > 870){
             $(".icontHeder800").css({display: "none"});
 
         }
@@ -44,7 +44,7 @@ $(document).ready(function() {
             $(".menuItem a").css({
                 color: "black",
             })
-            if(screenWidth < 801)
+            if(screenWidth < 871)
                 {
                     $(".icontHeder800").css({display: "block"})
 
@@ -68,7 +68,7 @@ $(document).ready(function() {
         $(".menuItem a").css({
             color: "black",
         })
-        if(screenWidth < 801)
+        if(screenWidth < 871)
             {
                 $(".icontHeder800").css({display: "block"})
 
@@ -157,9 +157,10 @@ $(document).ready(function() {
     $(".menuItemSub").click(function(){
         $(".menuSub").fadeOut("slow");
     });
+    var witdMenusub = $(".itemHeaderSub").width();
     $(".menuSub").click(function(){
         var x = event.pageX;
-        if(x > 400)
+        if(x > witdMenusub)
         {
                 $(".menuSub").fadeOut("slow");
 
