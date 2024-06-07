@@ -98,7 +98,17 @@
         height: 25px !important;
     }
 } 
+@media only screen and (min-width: 600px) and (max-width: 800px){
+    .homeSubTitle{
+        font-size: 35px !important;
+    }
+    .homeSubTxt{
+        font-size: 14px !important;
+
+    }
+}
 @media only screen and (max-width: 870px) {
+
     .avataReview{
         left: 0px !important;
     }
