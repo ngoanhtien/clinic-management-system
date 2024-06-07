@@ -260,18 +260,17 @@ html body{
     right: 70px;
 }
 .itemHeader div{
-    margin-right: 20px;
-    padding: 20px;
+    margin-right: 30px;
     font-weight: 100;
 
 }
 .menuItem a:hover{
     font-weight: 700;
     color: #ac4d00 !important;
-}
-.menuItem:hover{
-
     border-bottom: 4px solid #ac4d00;
+}
+.menuItem a{
+    height: 100%;
 }
 .menuItem{
     cursor: pointer;
@@ -282,6 +281,9 @@ html body{
 }
 .menuItem a{
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .icontHeder800{
     position: absolute;
