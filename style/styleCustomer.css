@@ -208,13 +208,13 @@ html body{
 
   
 .txtLogo{
-    margin-left: 0px;
+    margin-left: 20px;
 }
 .txtLogo p{
     font-family: "Protest Revolution", sans-serif !important;
     font-weight: 600;
     font-style: normal;
-    font-size: 30px;
+    font-size: 40px;
 }
 #header{
     width: 100%;
@@ -320,7 +320,7 @@ html body{
     overflow: hidden;
     position: relative;
     z-index: 1;
-    background-color: rgb(184, 100, 100);
+    background-color: rgba(255, 255, 255, 0.899);
     font-family: Helvetica, sans-serif;
 
 
@@ -364,7 +364,7 @@ html body{
 .bgMark1{
     position: absolute;
     height: 65px;
-    width: 130%;
+    width: 140%;
     z-index: 2;
     background-color: #F5F5F5;
     rotate: 358deg;
@@ -375,7 +375,7 @@ html body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     font-weight: 400;
-    font-size: 24;
+    font-size: 16px;
 }
 .markBtn div{
     margin-left: 30px;
@@ -386,7 +386,7 @@ html body{
 }
 .markBtnChoose{
     font-weight: 700;
-    font-size: 17px;
+    font-size: 20px;
     background-color: #6e3c13;
     color: white
 }
@@ -410,13 +410,15 @@ html body{
     position: relative;
     background-color: #6e3c13;
     color: white;
-    font-size: 14px;
+    font-size: 18px;
     padding: 10px 35px;
     width: fit-content;
     height: fit-content;
     z-index: 1;
     font-weight: 400;
     margin-top: 40px;
+    padding: 15px 40px ;
+    border-radius: 2px;
 }
 .homeContent-btn img{
     width: 8px;
@@ -427,9 +429,11 @@ html body{
 }
 
 .homeContent-btn:hover{
-    font-size: 16px;
+    font-size: 22px;
     background-color: #67370f;
     transform: scale(1.02);
+    margin-top: 40px;
+    padding: 15px 50px ;
 }
 
 .homeSubTitle{
@@ -495,12 +499,12 @@ html body{
 }
 #contentDoctor-imgDoctor{
     overflow: hidden;
-    height: 700px;
+    height: 780px;
     border-radius: 20px;
 
 }
 #contentDoctor-imgDoctor img{
-    height: 700px;
+    height: 780px;
 
     border-radius: 20px;
 
@@ -517,11 +521,12 @@ html body{
     margin-top: 80px;
 }
 #inforDoctor-bg{
+    margin-right: 6%;
     z-index: 0;
     border-radius: 20px;
     background-color: #6e3c13;
     color: white;
-    height: 850px;
+    height: 1000px;
     width: 80%;
     position: absolute;
     right: 0px;
@@ -553,15 +558,15 @@ html body{
 }
 
 .btnBooking{
-    font-size: 20px;
-    width: 180px;
-    height: 45px;
+    font-size: 24px;
+    width: 300px;
+    height: 70px;
     background-color: #6e3c13;
     border: 1px solid white;
     transition: 1s ;
-    border-radius: 10px;
+    border-radius: 10px;    
     z-index: 2;
-    margin: 40px;
+    margin: 15px;
 }
 .btnBooking a{
     color: white;

@@ -102,6 +102,7 @@ $(document).ready(function() {
     // slider img 
 
 //--- still bug ---
+
     var heightScreen = $(window).height();
     $("#home_gradient").css({height: heightScreen});
     $(".imgMainHome img").hide();
@@ -114,16 +115,16 @@ $(document).ready(function() {
 
     function homeContentAnimate(){
             $(".homeContent").fadeOut(0);
-             $(".homeContent").fadeIn(2000);
+             $(".homeContent").fadeIn(1000);
     }
     var count = 1;
     function slideImg() {
-        homeContentAnimate()
+       homeContentAnimate()
         $(".imgMainHome img").css({
             transform: "scale(1.2)",
             transition: "transform 0s ease "
         });
-        $("#img_home" + count).hide();
+        $(".img_home").hide();
         if(count == 3)
         {
             count = 1;
@@ -147,14 +148,18 @@ $(document).ready(function() {
 
     $(".markBtn div").click(function(){
         $(".markBtn div").removeClass("markBtnChoose");
-    ;
         $(this).addClass("markBtnChoose");
-
         count = parseInt($(this).attr("id")[11]);
-        $(".imgMainHome img").hide();
-        $("#img_home" + count).show();
-        clearInterval(intervalId);
-        intervalId = setInterval(slideImg, 6000);
+        if(count == 1)
+        {
+            count = 3;
+        }
+        else
+        {
+            count = count - 1;
+        }
+        console.log(count);
+        slideImg();
     })
 //--- still bug ---
     $(".icontHeder800").click(function(){
@@ -210,10 +215,12 @@ $(document).ready(function() {
         if(!check)
         {
             $(".notification").css({display: "none"});
+            $("#mesSuccessReg").hide();
             showMess("#messWrongReg");
         }
         else
         {
+            $("#messWrongReg").hide();
             var checkValidate = validateReg();
             if(checkValidate)
             {
