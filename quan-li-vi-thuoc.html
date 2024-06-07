@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
   <!-- Template Main CSS File -->
-  <link href="assets/css/quan-li-vi-thuoc.css" rel="stylesheet">
+  <link href="assets/css/quan-ly-vi-thuoc.css" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -337,15 +337,16 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/quan-li-vi-thuoc.js"></script>
+  <script src="assets/js/quan-ly-vi-thuoc.js"></script>
   <!-- Main Content -->
   <main id="main" class="main">
     <div class="pagetitle">
       <h1>Quản lý vị thuốc</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-          <li class="breadcrumb-item active">Quản lý vị thuốc</li>
+          <li class="breadcrumb-item"><a href="admin.html">Trang chủ</a></li>
+          <li class="breadcrumb-item"><a href="quan-ly-vi-thuoc.html">Quản lý vị thuốc</a></li>
+          <li class="breadcrumb-item active">Danh sách vị thuốc</li>
         </ol>
       </nav>
     </div>
@@ -372,7 +373,7 @@
                 </div>
               </div>
 
-              <table class="table table-responsive table-striped">
+              <table class="table table-responsive table-striped" style="text-align: center; vertical-align: middle;">
                 <thead>
                   <tr>
                     <th scope="col" onclick="sortTable(0)">STT</th>
@@ -387,7 +388,7 @@
                     <th scope="col">Hành động</th>
                   </tr>
                 </thead>
-                <tbody id="medicineTable">
+                <tbody id="medicineTable" style="text-align: center; vertical-align: middle;">
                   <!-- Data will be injected here -->
                 </tbody>
               </table>
