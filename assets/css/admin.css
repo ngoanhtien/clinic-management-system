@@ -764,3 +764,112 @@ a#logo {
 .sidebar-nav .nav-content a.active i {
   background-color: #4154f1;
 }
+
+
+.datatable-top {
+  padding: 10px 0;
+  height: 56px;
+}
+
+.datatable-bottom {
+  padding: 10px 0 0 0;
+}
+
+.datatable-dropdown {
+  float: left;
+}
+
+.datatable-dropdown label {
+  display: inline-block;
+  cursor: default;
+  color: rgb(33, 37, 41);
+}
+
+.datatable-dropdown label .datatable-selector {
+  padding: 6px;
+}
+
+.datatable-dropdown label select {
+  word-wrap: normal;
+  text-transform: none;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.datatable-dropdown label select option {
+  font-weight: normal;
+  display: block;
+  min-height: 1.2em;
+  padding: 0 2px 1px;
+  white-space: nowrap;
+}
+
+.datatable-search {
+  float: right;
+  color: rgb(33, 37, 41);
+}
+
+.datatable-input {
+  padding: 6px 12px;
+}
+
+.datatable-bottom {
+  padding: 8px 10px;
+}
+
+.datatable-info {
+  float: left;
+  margin: 7px 0px;
+}
+
+.datatable-pagination {
+  float: right;
+  
+}
+
+.datatable-pagination ul {
+  padding-left: 0px;
+  margin: 0px;
+}
+
+.datatable-pagination-list-item .datatable-hidden .datatable-disabled {
+  visibility: hidden;
+}
+
+.datatable-pagination ul li {
+  float: left;
+  list-style: none;
+}
+
+.datatable-pagination-list button {
+  color: inherit;
+  background-color: inherit;
+  cursor: pointer;
+  text-align: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+}
+
+.datatable-pagination button {
+  float: left;
+  margin-left: 2px;
+  position: relative;
+  padding: 6px 12px;
+  text-decoration-line: none;
+}
+
+.datatable-pagination .datatable-active button{
+  background-color: rgb(217, 217, 217)  ;
+  cursor: none;
+}
+
+.datatable-pagination button:hover{
+  background-color: rgb(217, 217, 217)  ;
+  cursor: pointer;
+}
