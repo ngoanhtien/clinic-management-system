@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <td>${medicine.name}</td>
             <td>${medicine.price}</td>
             <td>${medicine.date}</td>
-            <td><button onclick="viewMedicineDetails(${medicine.code})">Xem</button></td>
+            <td><button class="btn btn-primary" onclick="viewMedicineDetails(${medicine.code})">Xem</button></td>
             <td>
                 <button class="btn btn-warning btn-sm" onclick="editMedicine(${medicine.code})"><i class="bi bi-pencil-square"></i></button>
                 <button class="btn btn-danger btn-sm" onclick="deleteMedicine(${medicine.code})"><i class="bi bi-trash"></i></button>

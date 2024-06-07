@@ -262,7 +262,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link collapsed " href="index.html">
+        <a class="nav-link collapsed " href="admin.html">
           <i class="bi bi-grid"></i>
           <span>Trang chủ</span>
         </a>
@@ -289,7 +289,7 @@
       </li><!-- End "VỊ THUỐC" Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="">
+        <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-bar-chart"></i><span>Biểu đồ thống kê</span></i>
         </a>
       </li><!-- End Charts Nav -->
@@ -344,8 +344,9 @@
       <h1>Quản lý bài thuốc</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Trang chủ</a></li>
-          <li class="breadcrumb-item active">Quản lý bài thuốc</li>
+          <li class="breadcrumb-item"><a href="admin.html">Trang chủ</a></li>
+          <li class="breadcrumb-item"><a href="quan-ly-bai-thuoc.html">Quản lý bài thuốc</a></li>
+          <li class="breadcrumb-item active">Danh sách bài thuốc</li>
         </ol>
       </nav>
     </div>
@@ -364,7 +365,7 @@
                 </div>
               </div>
 
-              <table class="table table-responsive table-striped">
+              <table class="table table-responsive table-striped" style="text-align: center; vertical-align: middle;">
                 <thead>
                   <tr>
                     <th scope="col" onclick="sortTable(0)">STT</th>
@@ -377,7 +378,7 @@
                     <th scope="col">Hành động</th>
                   </tr>
                 </thead>
-                <tbody id="medicinesTableBody">
+                <tbody id="medicinesTableBody" style="text-align: center; vertical-align: middle;">
                   <!-- Data will be injected here -->
                 </tbody>
               </table>
