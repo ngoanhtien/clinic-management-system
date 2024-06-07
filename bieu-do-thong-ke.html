@@ -277,31 +277,27 @@
         <div class="col-lg-6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Biểu dồ thống kế số lượng bệnh nhân theo ngày</h5>
+              <h5 class="card-title">Biểu đồ thống kê doanh thu theo từng tháng trong năm</h5>
 
               <!-- Line Chart -->
               <canvas id="lineChart" style="max-height: 400px;"></canvas>
               <script>
                 document.addEventListener("DOMContentLoaded", () => {
-                  new Chart(document.querySelector('#lineChart'), {
-                    type: 'line',
-                    data: {
-                      labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'],
-                      datasets: [{
-                        label: 'Line Chart',
-                        data: [65, 59, 80, 59, 80, 81, 56, 55, 40, 65, 59, 81, 56, 55, 40, 65, 80, 81, 56, 55, 40, 81, 56, 55, 40, 65, 55, 40, 65, 59],
-                        fill: false,
-                        borderColor: 'rgb(75, 192, 192)',
-                        tension: 0.1
-                      }]
+                  echarts.init(document.querySelector("#barChart")).setOption({
+                    title: {
+                      text: 'Triệu VNĐ'
                     },
-                    options: {
-                      scales: {
-                        y: {
-                          beginAtZero: true
-                        }
-                      }
-                    }
+                    xAxis: {
+                      type: 'category',
+                      data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+                    },
+                    yAxis: {
+                      type: 'value'
+                    },
+                    series: [{
+                      data: [60, 50, 55, 53, 70, 110, 80, 60, 50, 59, 53, 73],
+                      type: 'bar'
+                    }]
                   });
                 });
               </script>
@@ -314,52 +310,52 @@
         <div class="col-lg-6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Biểu đồ thống kê số lượng bệnh nhân theo tháng</h5>
+              <h5 class="card-title ">Biểu đồ so sánh số lượng người sử dụng từng phương pháp tri liệu</h5>
 
               <!-- Bar Chart -->
               <canvas id="barChart" style="max-height: 400px;"></canvas>
               <script>
                 document.addEventListener("DOMContentLoaded", () => {
-                  new Chart(document.querySelector('#barChart'), {
-                    type: 'bar',
-                    data: {
-                      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-                      datasets: [{
-                        label: 'Bar Chart',
-                        data: [1800, 1562, 1700, 1550, 1556, 2300, 1740],
-                        backgroundColor: [
-                          'rgba(255, 99, 132, 0.2)',
-                          'rgba(255, 159, 64, 0.2)',
-                          'rgba(255, 205, 86, 0.2)',
-                          'rgba(75, 192, 192, 0.2)',
-                          'rgba(54, 162, 235, 0.2)',
-                          'rgba(153, 102, 255, 0.2)',
-                          'rgba(201, 203, 207, 0.2)'
-                        ],
-                        borderColor: [
-                          'rgb(255, 99, 132)',
-                          'rgb(255, 159, 64)',
-                          'rgb(255, 205, 86)',
-                          'rgb(75, 192, 192)',
-                          'rgb(54, 162, 235)',
-                          'rgb(153, 102, 255)',
-                          'rgb(201, 203, 207)'
-                        ],
-                        borderWidth: 1
-                      }]
+                  echarts.init(document.querySelector("#verticalBarChart")).setOption({
+                    title: {
+                      text: 'Phương pháp'
                     },
-                    options: {
-                      scales: {
-                        y: {
-                          beginAtZero: true
-                        }
+                    tooltip: {
+                      trigger: 'axis',
+                      axisPointer: {
+                        type: 'shadow'
+                      }
+                    },
+                    legend: {},
+                    grid: {
+                      left: '3%',
+                      right: '4%',
+                      bottom: '3%',
+                      containLabel: true
+                    },
+                    xAxis: {
+                      type: 'value',
+                      boundaryGap: [0, 0.01]
+                    },
+                    yAxis: {
+                      type: 'category',
+                      data: ['Thuốc Đông y', 'Bấm huyệt', 'Vật lý trị liệu', 'Châm cứu']
+                    },
+                    series: [{
+                        name: 'Tháng 4',
+                        type: 'bar',
+                        data: [67, 50, 53, 90]
+                      },
+                      {
+                        name: 'Tháng 5',
+                        type: 'bar',
+                        data: [56, 57, 53, 73]
                       }
                     }
                   });
                 });
               </script>
-              <!-- End Bar CHart -->
-
+              <!-- End Vertical Bar Chart -->
             </div>
           </div>
         </div>
@@ -372,6 +368,7 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
   <script src="assets/vendor/chart.js/chart.umd.js"></script>
   <script src="assets/vendor/echarts/echarts.min.js"></script>
 
