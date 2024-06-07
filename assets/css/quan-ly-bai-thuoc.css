@@ -1,9 +1,6 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 :root {
   scroll-behavior: smooth;
 }
@@ -46,28 +43,6 @@ h6 {
   }
 }
 
-@media (min-width: 1200px) {
-  .logo {
-    width: 280px;
-  }
-}
-
-a#logo {
-  text-decoration: none;
-}
-
-.logo img {
-  max-height: 46px;
-  margin-right: 6px;
-  margin-left: 6px;
-}
-
-.logo span {
-  font-size: 36px;
-  font-weight: 700;
-  color: #012970;
-  /* font-family: "Nunito", sans-serif; */
-}
 a#logo{
   text-decoration: none;
 }
@@ -488,6 +463,7 @@ background-color: #4154f1;
 .breadcrumb a {
   color: #899bbd;
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .breadcrumb a:hover {

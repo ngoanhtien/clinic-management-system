@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Quản lý bài thuốc </title>
+  <title>Quản lý vị thuốc </title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
   <!-- Template Main CSS File -->
-  <link href="assets/css/quan-ly-bai-thuoc.css" rel="stylesheet">
+  <link href="assets/css/quan-ly-vi-thuoc.css" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -188,7 +188,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link collapsed " href="admin.html">
+        <a class="nav-link collapsed " href="index.html">
           <i class="bi bi-grid"></i>
           <span>Trang chủ</span>
         </a>
@@ -201,14 +201,14 @@
       </li><!-- End "HỒ SƠ BỆNH NHÂN" Nav -->
 
       <li class="nav-item">
-        <a class="nav-link"  href="quan-ly-bai-thuoc.html">
+        <a class="nav-link collapsed"  href="#">
           <i class="bi bi-journal-text"></i>
           <span>Quản lý bài thuốc</span>
         </a>
       </li><!-- End "BÀI THUỐC" Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" >
+        <a class="nav-link"  href="quan-ly-vi-thuoc.html">
           <i class="bi bi-layout-text-window-reverse"></i>
           <span>Quản lý vị thuốc</span>
         </a>
@@ -263,16 +263,16 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/quan-ly-bai-thuoc.js"></script>
+  <script src="assets/js/quan-ly-vi-thuoc.js"></script>
   <!-- Main Content -->
   <main id="main" class="main">
     <div class="pagetitle">
-      <h1>Quản lý bài thuốc</h1>
+      <h1>Quản lý vị thuốc</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="admin.html">Trang chủ</a></li>
-          <li class="breadcrumb-item"><a href="quan-ly-bai-thuoc.html">Quản lý bài thuốc</a></li>
-          <li class="breadcrumb-item active">Danh sách bài thuốc</li>
+          <li class="breadcrumb-item"><a href="quan-ly-vi-thuoc.html">Quản lý vị thuốc</a></li>
+          <li class="breadcrumb-item active">Danh sách vị thuốc</li>
         </ol>
       </nav>
     </div>
@@ -282,12 +282,20 @@
           <div class="card">
             <div class="card-body">
               <div class="row mb-3">
-                <div class="col-md-5">
+                <div class="col-md-4">
                   <input type="text" id="searchInput" class="form-control" placeholder="Tìm kiếm vị thuốc">
                 </div>
-
-                <div class="col-md-2" class="text-end">
-                  <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addMedicineModal">Thêm bài thuốc</button>
+                <div class="col-md-2">
+                  <select id="entriesPerPage" class="form-select">
+                    <option value="all">All</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    
+                  </select>
+                </div>
+                <div class="col-md-6 text-end">
+                  <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addMedicineModal">Thêm vị thuốc</button>
                 </div>
               </div>
 
@@ -295,16 +303,18 @@
                 <thead>
                   <tr>
                     <th scope="col" onclick="sortTable(0)">STT</th>
-                    <th scope="col" onclick="sortTable(1)">Mã bài thuốc</th>
+                    <th scope="col" onclick="sortTable(1)">Mã vị thuốc</th>
                     <th scope="col">Hình ảnh</th>
-                    <th scope="col" onclick="sortTable(3)">Tên bài thuốc</th>
+                    <th scope="col" onclick="sortTable(3)">Tên vị thuốc</th>
+                    <th scope="col" onclick="sortTable(4)">Phân loại</th>
+                    <th scope="col" onclick="sortTable(5)">Trọng lượng</th>
                     <th scope="col" onclick="sortTable(6)">Giá (VNĐ)</th>
-                    <th scope="col" onclick="sortTable(6)">Ngày tạo</th>
-                    <th scope="col">Mô tả chi tiết</th>
+                    <th scope="col" onclick="sortTable(7)">Số lượng</th>
+                    <th scope="col">Mô tả</th>
                     <th scope="col">Hành động</th>
                   </tr>
                 </thead>
-                <tbody id="medicinesTableBody" style="text-align: center; vertical-align: middle;">
+                <tbody id="medicineTable" style="text-align: center; vertical-align: middle;">
                   <!-- Data will be injected here -->
                 </tbody>
               </table>
@@ -318,33 +328,36 @@
                   </nav>
                 </div>
               </div>
-              <div id="pagination">
-                <button id="prevPageBtn">Trang trước</button>
-                <select id="itemsPerPage">
-                    <option value="5">5</option>
-                    <option value="10">10</option>
-                    <option value="15">15</option>
-                    <option value="20">20</option>
-                </select>
-                <button id="nextPageBtn">Trang sau</button>
-              </div>
+
               <!-- Add Medicine Modal -->
               <div class="modal fade" id="addMedicineModal" tabindex="-1" aria-labelledby="addMedicineModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="addMedicineModalLabel"><b>Thêm bài thuốc</b></h5>
+                      <h5 class="modal-title" id="addMedicineModalLabel"><b>Thêm vị thuốc</b></h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                       <form id="addMedicineForm">
                         <div class="mb-2">
-                          <label for="medicineName" class="form-label">Tên bài thuốc <i class="text-danger">*</i></label>
+                          <label for="medicineName" class="form-label">Tên vị thuốc <i class="text-danger">*</i></label>
                           <input type="text" class="form-control" id="medicineName" required>
                         </div>
                         <div class="mb-2">
-                          <label for="medicinePrice" class="form-label">Giá (VND) <i class="text-danger">*</i></label>
+                          <label for="medicineCategory" class="form-label">Phân loại <i class="text-danger">*</i></label>
+                          <input type="text" class="form-control" id="medicineCategory" required>
+                        </div>
+                        <div class="mb-2">
+                          <label for="medicineWeight" class="form-label">Trọng lượng <i class="text-danger">*</i></label>
+                          <input type="number" class="form-control" id="medicineWeight" required>
+                        </div>
+                        <div class="mb-2">
+                          <label for="medicinePrice" class="form-label">Đơn giá (VND) <i class="text-danger">*</i></label>
                           <input type="number" class="form-control" id="medicinePrice" required>
+                        </div>
+                        <div class="mb-2">
+                          <label for="medicineQuantity" class="form-label">Số lượng <i class="text-danger">*</i></label>
+                          <input type="number" class="form-control" id="medicineQuantity" required>
                         </div>
                         <div class="mb-2">
                           <label for="medicineImage" class="form-label">Hình ảnh <i class="text-danger">*</i></label>
@@ -354,30 +367,7 @@
                           <label for="medicineDescription" class="form-label">Mô tả <i class="text-danger">*</i></label>
                           <textarea class="form-control" id="medicineDescription" rows="3" required></textarea>
                         </div>
-                        <div id="medicineDetails">
-                          <h3>Chi tiết bài thuốc</h3>
-                            <div class="medicine-detail">
-                              <div class="mb-2">
-                                <label for="ingredientName">Tên vị thuốc:</label>
-                                <input type="text" class="ingredientName" required>
-                              </div>
-                              <div class="mb-2">
-                                <label for="ingredientCategory">Phân loại:</label>
-                                <input type="text" class="ingredientCategory" required>
-                              </div>
-                              <div class="mb-3">
-                                <label for="ingredientQuantity">Số lượng:</label>
-                                <input type="number" class="ingredientQuantity" required>
-                              </div>
-                              <div class="mb-3">
-                                <label for="ingredientPrice">Giá (VNĐ):</label>
-                                <input type="number" class="ingredientPrice" required>
-                                <button type="button" class="deleteIngredientBtn">Xóa</button>
-                              </div>
-                              <button type="button" class="btn btn-primary" style="padding: 5px; margin-bottom:5px" id="addIngredientBtn">Thêm </button>
-                            </div>
-                        </div>
-                        <button type="submit" id="saveMedicineBtn" onclick="addMedicine()" class="btn btn-success">Lưu lại</button>
+                        <button type="submit" class="btn btn-success">Lưu lại</button>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Quay lại</button>
                       </form>
                     </div>
@@ -391,19 +381,31 @@
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="editMedicineModalLabel"><b>Sửa bài thuốc</b></h5>
+                      <h5 class="modal-title" id="editMedicineModalLabel"><b>Sửa vị thuốc</b></h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                       <form id="editMedicineForm">
                         <input type="hidden" id="editMedicineId">
                         <div class="mb-2">
-                          <label for="editMedicineName" class="form-label">Tên bài thuốc <i class="text-danger">*</i></label>
+                          <label for="editMedicineName" class="form-label">Tên vị thuốc <i class="text-danger">*</i></label>
                           <input type="text" class="form-control" id="editMedicineName" required>
                         </div>
                         <div class="mb-2">
-                          <label for="editMedicinePrice" class="form-label">Giá (VNĐ ) <i class="text-danger">*</i></label>
+                          <label for="editMedicineCategory" class="form-label">Phân loại <i class="text-danger">*</i></label>
+                          <input type="text" class="form-control" id="editMedicineCategory" required>
+                        </div>
+                        <div class="mb-2">
+                          <label for="editMedicineWeight" class="form-label">Trọng lượng <i class="text-danger">*</i></label>
+                          <input type="number" class="form-control" id="editMedicineWeight" required>
+                        </div>
+                        <div class="mb-2">
+                          <label for="editMedicinePrice" class="form-label">Đơn giá (VND) <i class="text-danger">*</i></label>
                           <input type="number" class="form-control" id="editMedicinePrice" required>
+                        </div>
+                        <div class="mb-2">
+                          <label for="editMedicineQuantity" class="form-label">Số lượng <i class="text-danger">*</i></label>
+                          <input type="number" class="form-control" id="editMedicineQuantity" required>
                         </div>
                         <div class="mb-2">
                           <label for="editMedicineImage" class="form-label">Hình ảnh <i class="text-danger">*</i></label>
@@ -413,21 +415,6 @@
                           <label for="editMedicineDescription" class="form-label">Mô tả <i class="text-danger">*</i></label>
                           <textarea class="form-control" id="editMedicineDescription" rows="3" required></textarea>
                         </div>
-                        <div id="medicineDetails">
-                          <h3>Chi tiết bài thuốc</h3>
-                          <div class="medicine-detail">
-                              <label for="ingredientName">Tên vị thuốc:</label>
-                              <input type="text" class="ingredientName" required>
-                              <label for="ingredientCategory">Phân loại:</label>
-                              <input type="text" class="ingredientCategory" required>
-                              <label for="ingredientQuantity">Số lượng:</label>
-                              <input type="number" class="ingredientQuantity" required>
-                              <label for="ingredientPrice">Giá (VNĐ):</label>
-                              <input type="number" class="ingredientPrice" required>
-                              <button type="button" class="deleteIngredientBtn">Xóa</button>
-                          </div>
-                          <button type="button" id="addIngredientBtn">Thêm vị thuốc</button>
-                      </div>
                         <button type="submit" class="btn btn-success">Lưu lại</button>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Quay lại</button>
                       </form>

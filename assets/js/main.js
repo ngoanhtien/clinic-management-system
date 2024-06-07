@@ -1,340 +1,330 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const medicines = [
-      {
-        id: 1,
-        code: 'BT001',
-        image: 'assets//img/messages-1.jpg',
-        name: 'Thuốc A',
-        price: 50000,
-        date: "2024-06-02",
-        description: 'Mô tả ngắn gọn cho thuốc A. Đây là một đoạn mô tả đầy đủ cho thuốc A.',
-        ingredients: [
-          { id: 1, name: "Vị thuốc 1", category: "Loại 1", quantity: 10, price: 5000 },
-          { id: 2, name: "Vị thuốc 2", category: "Loại 2", quantity: 20, price: 7000 },
-          { id: 3, name: "Vị thuốc 3", category: "Loại 3", quantity: 15, price: 6000 },
-          { id: 3, name: "Vị thuốc 3", category: "Loại 3", quantity: 15, price: 6000 },
-      ]
-      },
-      {
-        id: 2,
-        code: 'BT002',
-        image: 'assets//img/messages-2.jpg',
-        name: 'Thuốc B',
-        price: 510000,
-        date: "2024-06-02",
-        description: 'Mô tả ngắn gọn cho thuốc B. Đây là một đoạn mô tả đầy đủ cho thuốc B.',
-        ingredients: [
-          { id: 1, name: "Vị thuốc 1", category: "Loại 1", quantity: 10, price: 5000 },
-          { id: 2, name: "Vị thuốc 2", category: "Loại 2", quantity: 20, price: 7000 },
-          { id: 3, name: "Vị thuốc 3", category: "Loại 3", quantity: 15, price: 6000 },
-          { id: 3, name: "Vị thuốc 3", category: "Loại 3", quantity: 15, price: 6000 },
-      ]
-      },
-      {
-        id: 3,
-        code: 'BT003',
-        image: 'assets//img/messages-3.jpg',
-        name: 'Thuốc C',
-        price: 3350000,
-        date: "2024-06-02",
-        description: 'Mô tả ngắn gọn cho thuốc C. Đây là một đoạn mô tả đầy đủ cho thuốc C.',
-        ingredients: [
-          { id: 1, name: "Vị thuốc 1", category: "Loại 1", quantity: 10, price: 5000 },
-          { id: 2, name: "Vị thuốc 2", category: "Loại 2", quantity: 20, price: 7000 },
-          { id: 3, name: "Vị thuốc 3", category: "Loại 3", quantity: 15, price: 6000 },
-          { id: 3, name: "Vị thuốc 3", category: "Loại 3", quantity: 15, price: 6000 },
-      ]
-      },
-      {
-        id: 4,
-        code: 'BT004',
-        image: 'assets//img/messages-1.jpg',
-        name: 'Thuốc A',
-        price: 50000,
-        date: "2024-06-02",
-        description: 'Mô tả ngắn gọn cho thuốc A. Đây là một đoạn mô tả đầy đủ cho thuốc A.',
-        ingredients: [
-          { id: 1, name: "Vị thuốc 1", category: "Loại 1", quantity: 10, price: 5000 },
-          { id: 2, name: "Vị thuốc 2", category: "Loại 2", quantity: 20, price: 7000 },
-          { id: 3, name: "Vị thuốc 3", category: "Loại 3", quantity: 15, price: 6000 },
-          { id: 3, name: "Vị thuốc 3", category: "Loại 3", quantity: 15, price: 6000 },
-      ]
-      },
-      {
-        id: 5,
-        code: 'BT005',
-        image: 'assets//img/messages-2.jpg',
-        name: 'Thuốc B',
-        price: 510000,
-        date: "2024-06-02",
-        description: 'Mô tả ngắn gọn cho thuốc B. Đây là một đoạn mô tả đầy đủ cho thuốc B.',
-        ingredients: [
-          { id: 1, name: "Vị thuốc 1", category: "Loại 1", quantity: 10, price: 5000 },
-          { id: 2, name: "Vị thuốc 2", category: "Loại 2", quantity: 20, price: 7000 },
-          { id: 3, name: "Vị thuốc 3", category: "Loại 3", quantity: 15, price: 6000 },
-          { id: 3, name: "Vị thuốc 3", category: "Loại 3", quantity: 15, price: 6000 },
-      ]
-      },
-      {
-        id: 6,
-        code: 'BT006',
-        image: 'assets//img/messages-3.jpg',
-        name: 'Thuốc C',
-        price: 3350000,
-        date: "2024-06-02",
-        description: 'Mô tả ngắn gọn cho thuốc C. Đây là một đoạn mô tả đầy đủ cho thuốc C.',
-        ingredients: [
-          { id: 1, name: "Vị thuốc 1", category: "Loại 1", quantity: 10, price: 5000 },
-          { id: 2, name: "Vị thuốc 2", category: "Loại 2", quantity: 20, price: 7000 },
-          { id: 3, name: "Vị thuốc 3", category: "Loại 3", quantity: 15, price: 6000 },
-          { id: 3, name: "Vị thuốc 3", category: "Loại 3", quantity: 15, price: 6000 },
-      ]
-      },
-      {
-        id: 7,
-        code: 'BT007',
-        image: 'assets//img/messages-2.jpg',
-        name: 'Thuốc B',
-        price: 510000,
-        date: "2024-06-02",
-        description: 'Mô tả ngắn gọn cho thuốc B. Đây là một đoạn mô tả đầy đủ cho thuốc B.',
-        ingredients: [
-          { id: 1, name: "Vị thuốc 1", category: "Loại 1", quantity: 10, price: 5000 },
-          { id: 2, name: "Vị thuốc 2", category: "Loại 2", quantity: 20, price: 7000 },
-          { id: 3, name: "Vị thuốc 3", category: "Loại 3", quantity: 15, price: 6000 },
-          { id: 3, name: "Vị thuốc 3", category: "Loại 3", quantity: 15, price: 6000 },
-      ]
-      },
-      {
-        id: 8,
-        code: 'BT008',
-        image: 'assets//img/messages-3.jpg',
-        name: 'Thuốc C',
-        price: 3350000,
-        date: "2024-06-02",
-        description: 'Mô tả ngắn gọn cho thuốc C. Đây là một đoạn mô tả đầy đủ cho thuốc C.',
-        ingredients: [
-          { id: 1, name: "Vị thuốc 1", category: "Loại 1", quantity: 10, price: 5000 },
-          { id: 2, name: "Vị thuốc 2", category: "Loại 2", quantity: 20, price: 7000 },
-          { id: 3, name: "Vị thuốc 3", category: "Loại 3", quantity: 15, price: 6000 },
-          { id: 3, name: "Vị thuốc 3", category: "Loại 3", quantity: 15, price: 6000 },
-      ]
-      },
-      {
-        id: 9,
-        code: 'BT009',
-        image: 'assets//img/messages-1.jpg',
-        name: 'Thuốc A',
-        price: 50000,
-        date: "2024-06-02",
-        description: 'Mô tả ngắn gọn cho thuốc A. Đây là một đoạn mô tả đầy đủ cho thuốc A.',
-        ingredients: [
-          { id: 1, name: "Vị thuốc 1", category: "Loại 1", quantity: 10, price: 5000 },
-          { id: 2, name: "Vị thuốc 2", category: "Loại 2", quantity: 20, price: 7000 },
-          { id: 3, name: "Vị thuốc 3", category: "Loại 3", quantity: 15, price: 6000 },
-          { id: 3, name: "Vị thuốc 3", category: "Loại 3", quantity: 15, price: 6000 },
-      ]
-      },
-      {
-        id: 10,
-        code: 'BT010',
-        image: 'assets//img/messages-2.jpg',
-        name: 'Thuốc B',
-        price: 510000,
-        date: "2024-06-02",
-        description: 'Mô tả ngắn gọn cho thuốc B. Đây là một đoạn mô tả đầy đủ cho thuốc B.',
-        ingredients: [
-          { id: 1, name: "Vị thuốc 1", category: "Loại 1", quantity: 10, price: 5000 },
-          { id: 2, name: "Vị thuốc 2", category: "Loại 2", quantity: 20, price: 7000 },
-          { id: 3, name: "Vị thuốc 3", category: "Loại 3", quantity: 15, price: 6000 },
-          { id: 3, name: "Vị thuốc 3", category: "Loại 3", quantity: 15, price: 6000 },
-      ]
-      },
-      {
-        id: 11,
-        code: 'BT011',
-        image: 'assets//img/messages-3.jpg',
-        name: 'Thuốc C',
-        price: 3350000,
-        date: "2024-06-02",
-        description: 'Mô tả ngắn gọn cho thuốc C. Đây là một đoạn mô tả đầy đủ cho thuốc C.',
-        ingredients: [
-          { id: 1, name: "Vị thuốc 1", category: "Loại 1", quantity: 10, price: 5000 },
-          { id: 2, name: "Vị thuốc 2", category: "Loại 2", quantity: 20, price: 7000 },
-          { id: 3, name: "Vị thuốc 3", category: "Loại 3", quantity: 15, price: 6000 },
-          { id: 3, name: "Vị thuốc 3", category: "Loại 3", quantity: 15, price: 6000 },
-      ]
-      },
-    ];
+(function() {
+    "use strict";
   
-    let currentPage = 1;
-    let medicinesPerPage = 5;
-  
-    let ingredientsData = [];
-          medicines.forEach(medicine => {
-            medicine.ingredients.forEach(ingredient => {
-                  if (!ingredientsData.find(i => i.ingredientName === ingredient.ingredientName)) {
-                      ingredientsData.push(ingredient);
-                  }
-              });
-          });
-  
-    function renderTableData(medicines) {
-      const medicinesTableBody = document.getElementById('medicinesTableBody');
-      medicinesTableBody.innerHTML = '';
-      medicines.forEach((medicine, index) => {
-          const row = document.createElement('tr');
-          row.innerHTML = `
-              <td>${index + 1}</td>
-              <td>${medicine.code}</td>
-              <td><img src="${medicine.image}" alt="${medicine.name}" width="50"></td>
-              <td>${medicine.name}</td>
-              <td>${medicine.price}</td>
-              <td>${medicine.date}</td>
-              <td><button onclick="viewMedicineDetails(${medicine.code})">Xem</button></td>
-              <td>
-                  <button class="btn btn-warning btn-sm" onclick="editMedicine(${medicine.code})"><i class="bi bi-pencil-square"></i></button>
-                  <button class="btn btn-danger btn-sm" onclick="deleteMedicine(${medicine.code})"><i class="bi bi-trash"></i></button>
-              </td>
-          `;
-          medicinesTableBody.appendChild(row);
-      });
-    }
-    //next page
-    function renderPagination() {
-      document.getElementById('prevPageBtn').disabled = currentPage === 1;
-      document.getElementById('nextPageBtn').disabled = currentPage * medicinesPerPage >= medicines.length;
-    }
-    function paginateMedicines() {
-      const start = (currentPage - 1) * medicinesPerPage;
-      const end = start + medicinesPerPage;
-      renderMedicinesTable(medicines.slice(start, end));
-      renderPagination();
-    }
-  
-    function changePage(direction) {
-      currentPage += direction;
-      paginateMedicines();
-    }
-    
-  /* ẨN BỚT ĐI 
-    /*sỏttttttttttttttttttttttttttt
-    function sortTable(columnIndex) {
-      const tableBody = document.getElementById('medicinesTableBody');
-      const rows = Array.from(tableBody.rows);
-      const currentIsAscending = tableBody.getAttribute('data-sort') === 'asc';
-  
-      rows.sort((a, b) => {
-        const aText = a.cells[columnIndex].innerText;
-        const bText = b.cells[columnIndex].innerText;
-        return currentIsAscending 
-          ? aText.localeCompare(bText, 'vi', { numeric: true })
-          : bText.localeCompare(aText, 'vi', { numeric: true });
-      });
-  
-      tableBody.innerHTML = '';
-      rows.forEach(row => tableBody.appendChild(row));
-      tableBody.setAttribute('data-sort', currentIsAscending ? 'desc' : 'asc');
-    }
-   */
-  /*------------------------------------------------------------- */
-  renderTableData(medicines);
-    window.editMedicine = function(id) {
-      const medicine = medicines.find(medicine => medicine.id === id);
-      if (medicine) {
-        document.getElementById('editMedicineId').value = medicine.id;
-        document.getElementById('editMedicineName').value = medicine.name;
-        document.getElementById('editMedicinePrice').value = medicine.price;
-        document.getElementById('editMedicineDate').value = medicine.date;
-        document.getElementById('editMedicineDescription').value = medicine.description;
-        const editModal = new bootstrap.Modal(document.getElementById('editMedicineModal'));
-        editModal.show();
+    /**
+     * Easy selector helper function
+     */
+    const select = (el, all = false) => {
+      el = el.trim()
+      if (all) {
+        return [...document.querySelectorAll(el)]
+      } else {
+        return document.querySelector(el)
       }
-    };
+    }
   
-    window.deleteMedicine = function(id) {
-      if (confirm('Bạn có chắc chắn muốn xóa bài thuốc này?')) {
-        const index = medicines.findIndex(medicine => medicine.id === id);
-        if (index !== -1) {
-          medicines.splice(index, 1);
-          renderTableData(medicines);
+    /**
+     * Easy event listener function
+     */
+    const on = (type, el, listener, all = false) => {
+      if (all) {
+        select(el, all).forEach(e => e.addEventListener(type, listener))
+      } else {
+        select(el, all).addEventListener(type, listener)
+      }
+    }
+  
+    /**
+     * Easy on scroll event listener 
+     */
+    const onscroll = (el, listener) => {
+      el.addEventListener('scroll', listener)
+    }
+  
+    /**
+     * Sidebar toggle
+     */
+    if (select('.toggle-sidebar-btn')) {
+      on('click', '.toggle-sidebar-btn', function(e) {
+        select('body').classList.toggle('toggle-sidebar')
+      })
+    }
+  
+    /**
+     * Search bar toggle
+     */
+    if (select('.search-bar-toggle')) {
+      on('click', '.search-bar-toggle', function(e) {
+        select('.search-bar').classList.toggle('search-bar-show')
+      })
+    }
+  
+    /**
+     * Navbar links active state on scroll
+     */
+    let navbarlinks = select('#navbar .scrollto', true)
+    const navbarlinksActive = () => {
+      let position = window.scrollY + 200
+      navbarlinks.forEach(navbarlink => {
+        if (!navbarlink.hash) return
+        let section = select(navbarlink.hash)
+        if (!section) return
+        if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+          navbarlink.classList.add('active')
+        } else {
+          navbarlink.classList.remove('active')
+        }
+      })
+    }
+    window.addEventListener('load', navbarlinksActive)
+    onscroll(document, navbarlinksActive)
+  
+    /**
+     * Toggle .header-scrolled class to #header when page is scrolled
+     */
+    let selectHeader = select('#header')
+    if (selectHeader) {
+      const headerScrolled = () => {
+        if (window.scrollY > 100) {
+          selectHeader.classList.add('header-scrolled')
+        } else {
+          selectHeader.classList.remove('header-scrolled')
         }
       }
-    };
-  /////////////////////////////////
-    document.getElementById('addMedicineForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const newMedicine = {
-        id: medicines.length + 1,
-        code: `BT00${medicines.length + 1}`,
-        image: URL.createObjectURL(document.getElementById('medicineImage').files[0]),
-        name: document.getElementById('medicineName').value,
-        price: document.getElementById('medicinePrice').value,
-        quantity: document.getElementById('medicineDate').value,
-        description: document.getElementById('medicineDescription').value
-      };
-      medicines.push(newMedicine);
-      renderTableData(medicines);
-      document.getElementById('addMedicineForm').reset();
-      const addModal = bootstrap.Modal.getInstance(document.getElementById('addMedicineModal'));
-      addModal.hide();
-    });
-  
-    document.getElementById('editMedicineForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const id = parseInt(document.getElementById('editMedicineId').value);
-      const index = medicines.findIndex(medicine => medicine.id === id);
-      if (index !== -1) {
-        medicines[index].name = document.getElementById('editMedicineName').value;
-        medicines[index].category = document.getElementById('editMedicineCategory').value;
-        medicines[index].weight = document.getElementById('editMedicineWeight').value;
-        medicines[index].price = document.getElementById('editMedicinePrice').value;
-        medicines[index].quantity = document.getElementById('editMedicineQuantity').value;
-        medicines[index].description = document.getElementById('editMedicineDescription').value;
-        if (document.getElementById('editMedicineImage').files[0]) {
-          medicines[index].image = URL.createObjectURL(document.getElementById('editMedicineImage').files[0]);
-        }
-        renderTableData(medicines);
-        const editModal = bootstrap.Modal.getInstance(document.getElementById('editMedicineModal'));
-        editModal.hide();
-      }
-    });
-  
-    document.getElementById('searchInput').addEventListener('input', function() {
-      const keyword = this.value.toLowerCase();
-      const filteredData = medicines.filter(medicine => medicine.name.toLowerCase().includes(keyword) || medicine.code.toLowerCase().includes(keyword));
-      renderTableData(filteredData);
-    });
-  
-  /*etriesPerpageeeeeeeeeeeeeeeee */
-  
-    document.getElementById('entriesPerPage').addEventListener('change', function() {
-      const entriesPerPage = this.value === 'all' ? medicines.length : parseInt(this.value);
-      renderTableData(medicines.slice(0, entriesPerPage));
-      renderPagination(entriesPerPage);
-    });
-  
-    function renderPagination(entriesPerPage) {
-      const totalPages = Math.ceil(medicines.length / entriesPerPage);
-      const pagination = document.getElementById('pagination');
-      pagination.innerHTML = '';
-      for (let i = 1; i <= totalPages; i++) {
-        const li = document.createElement('li');
-        li.classList.add('page-medicine');
-        li.innerHTML = `<a class="page-link" href="#">${i}</a>`;
-        li.addEventListener('click', function() {
-          const start = (i - 1) * entriesPerPage;
-          const end = i * entriesPerPage;
-          renderTableData(medicines.slice(start, end));
-        });
-        pagination.appendChild(li);
-      }
+      window.addEventListener('load', headerScrolled)
+      onscroll(document, headerScrolled)
     }
   
-    renderTableData(medicines);
-    renderPagination(5);
+    /**
+     * Back to top button
+     */
+    let backtotop = select('.back-to-top')
+    if (backtotop) {
+      const toggleBacktotop = () => {
+        if (window.scrollY > 100) {
+          backtotop.classList.add('active')
+        } else {
+          backtotop.classList.remove('active')
+        }
+      }
+      window.addEventListener('load', toggleBacktotop)
+      onscroll(document, toggleBacktotop)
+    }
   
+    /**
+     * Initiate tooltips
+     */
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
   
+    /**
+     * Initiate quill editors
+     */
+    if (select('.quill-editor-default')) {
+      new Quill('.quill-editor-default', {
+        theme: 'snow'
+      });
+    }
   
-  });
+    if (select('.quill-editor-bubble')) {
+      new Quill('.quill-editor-bubble', {
+        theme: 'bubble'
+      });
+    }
   
+    if (select('.quill-editor-full')) {
+      new Quill(".quill-editor-full", {
+        modules: {
+          toolbar: [
+            [{
+              font: []
+            }, {
+              size: []
+            }],
+            ["bold", "italic", "underline", "strike"],
+            [{
+                color: []
+              },
+              {
+                background: []
+              }
+            ],
+            [{
+                script: "super"
+              },
+              {
+                script: "sub"
+              }
+            ],
+            [{
+                list: "ordered"
+              },
+              {
+                list: "bullet"
+              },
+              {
+                indent: "-1"
+              },
+              {
+                indent: "+1"
+              }
+            ],
+            ["direction", {
+              align: []
+            }],
+            ["link", "image", "video"],
+            ["clean"]
+          ]
+        },
+        theme: "snow"
+      });
+    }
+  
+    /**
+     * Initiate TinyMCE Editor
+     */
+    // const useDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    // const isSmallScreen = window.matchMedia('(max-width: 1023.5px)').matches;
+  
+    // tinymce.init({
+    //   selector: 'textarea.tinymce-editor',
+    //   plugins: 'preview importcss searchreplace autolink autosave save directionality code visualblocks visualchars fullscreen image link media template codesample table charmap pagebreak nonbreaking anchor insertdatetime advlist lists wordcount help charmap quickbars emoticons',
+    //   editimage_cors_hosts: ['picsum.photos'],
+    //   menubar: 'file edit view insert format tools table help',
+    //   toolbar: 'undo redo | bold italic underline strikethrough | fontfamily fontsize blocks | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist | forecolor backcolor removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media template link anchor codesample | ltr rtl',
+    //   toolbar_sticky: true,
+    //   toolbar_sticky_offset: isSmallScreen ? 102 : 108,
+    //   autosave_ask_before_unload: true,
+    //   autosave_interval: '30s',
+    //   autosave_prefix: '{path}{query}-{id}-',
+    //   autosave_restore_when_empty: false,
+    //   autosave_retention: '2m',
+    //   image_advtab: true,
+    //   link_list: [{
+    //       title: 'My page 1',
+    //       value: 'https://www.tiny.cloud'
+    //     },
+    //     {
+    //       title: 'My page 2',
+    //       value: 'http://www.moxiecode.com'
+    //     }
+    //   ],
+    //   image_list: [{
+    //       title: 'My page 1',
+    //       value: 'https://www.tiny.cloud'
+    //     },
+    //     {
+    //       title: 'My page 2',
+    //       value: 'http://www.moxiecode.com'
+    //     }
+    //   ],
+    //   image_class_list: [{
+    //       title: 'None',
+    //       value: ''
+    //     },
+    //     {
+    //       title: 'Some class',
+    //       value: 'class-name'
+    //     }
+    //   ],
+    //   importcss_append: true,
+    //   file_picker_callback: (callback, value, meta) => {
+    //     /* Provide file and text for the link dialog */
+    //     if (meta.filetype === 'file') {
+    //       callback('https://www.google.com/logos/google.jpg', {
+    //         text: 'My text'
+    //       });
+    //     }
+  
+    //     /* Provide image and alt text for the image dialog */
+    //     if (meta.filetype === 'image') {
+    //       callback('https://www.google.com/logos/google.jpg', {
+    //         alt: 'My alt text'
+    //       });
+    //     }
+  
+    //     /* Provide alternative source and posted for the media dialog */
+    //     if (meta.filetype === 'media') {
+    //       callback('movie.mp4', {
+    //         source2: 'alt.ogg',
+    //         poster: 'https://www.google.com/logos/google.jpg'
+    //       });
+    //     }
+    //   },
+    //   templates: [{
+    //       title: 'New Table',
+    //       description: 'creates a new table',
+    //       content: '<div class="mceTmpl"><table width="98%%"  border="0" cellspacing="0" cellpadding="0"><tr><th scope="col"> </th><th scope="col"> </th></tr><tr><td> </td><td> </td></tr></table></div>'
+    //     },
+    //     {
+    //       title: 'Starting my story',
+    //       description: 'A cure for writers block',
+    //       content: 'Once upon a time...'
+    //     },
+    //     {
+    //       title: 'New list with dates',
+    //       description: 'New List with dates',
+    //       content: '<div class="mceTmpl"><span class="cdate">cdate</span><br><span class="mdate">mdate</span><h2>My List</h2><ul><li></li><li></li></ul></div>'
+    //     }
+    //   ],
+    //   template_cdate_format: '[Date Created (CDATE): %m/%d/%Y : %H:%M:%S]',
+    //   template_mdate_format: '[Date Modified (MDATE): %m/%d/%Y : %H:%M:%S]',
+    //   height: 600,
+    //   image_caption: true,
+    //   quickbars_selection_toolbar: 'bold italic | quicklink h2 h3 blockquote quickimage quicktable',
+    //   noneditable_class: 'mceNonEditable',
+    //   toolbar_mode: 'sliding',
+    //   contextmenu: 'link image table',
+    //   skin: useDarkMode ? 'oxide-dark' : 'oxide',
+    //   content_css: useDarkMode ? 'dark' : 'default',
+    //   content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:16px }'
+    // });
+  
+    /**
+     * Initiate Bootstrap validation check
+     */
+    var needsValidation = document.querySelectorAll('.needs-validation')
+  
+    Array.prototype.slice.call(needsValidation)
+      .forEach(function(form) {
+        form.addEventListener('submit', function(event) {
+          if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+          }
+  
+          form.classList.add('was-validated')
+        }, false)
+      })
+  
+    /**
+     * Initiate Datatables
+     */
+    const datatables = select('.datatable', true)
+    datatables.forEach(datatable => {
+      new simpleDatatables.DataTable(datatable, {
+        perPageSelect: [5, 10, 15, ["All", -1]],
+        columns: [{
+            select: 2,
+            sortSequence: ["desc", "asc"]
+          },
+          {
+            select: 3,
+            sortSequence: ["desc"]
+          },
+          {
+            select: 4,
+            cellClass: "green",
+            headerClass: "red"
+          }
+        ]
+      });
+    })
+  
+    /**
+     * Autoresize echart charts
+     */
+    const mainContainer = select('#main');
+    if (mainContainer) {
+      setTimeout(() => {
+        new ResizeObserver(function() {
+          select('.echart', true).forEach(getEchart => {
+            echarts.getInstanceByDom(getEchart).resize();
+          })
+        }).observe(mainContainer);
+      }, 200);
+    }
+  
+  })();
