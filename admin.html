@@ -15,12 +15,13 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
-  <!-- Template Main CSS File -->
-  <link href="assets/css/admin.css" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <link href="assets/css/admin.css" rel="stylesheet">
+
 
 </head>
 
@@ -337,7 +338,7 @@
         <div class="col-lg-6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Bar Chart</h5>
+              <h5 class="card-title">Biểu đồ thống kê doanh thu theo từng tháng trong năm</h5>
 
               <!-- Bar Chart -->
               <div id="barChart" style="min-height: 400px;" class="echart"></div>
@@ -345,15 +346,18 @@
               <script>
                 document.addEventListener("DOMContentLoaded", () => {
                   echarts.init(document.querySelector("#barChart")).setOption({
+                    title: {
+                      text: 'Triệu VNĐ'
+                    },
                     xAxis: {
                       type: 'category',
-                      data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+                      data: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
                     },
                     yAxis: {
                       type: 'value'
                     },
                     series: [{
-                      data: [120, 200, 150, 80, 70, 110, 130],
+                      data: [60, 50, 55, 53, 70, 110, 80, 60, 50, 59, 53, 73],
                       type: 'bar'
                     }]
                   });
@@ -368,7 +372,7 @@
         <div class="col-lg-6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Vertical Bar Chart</h5>
+              <h5 class="card-title ">Biểu đồ so sánh số lượng người sử dụng từng phương pháp tri liệu</h5>
 
               <!-- Vertical Bar Chart -->
               <div id="verticalBarChart" style="min-height: 400px;" class="echart"></div>
@@ -377,7 +381,7 @@
                 document.addEventListener("DOMContentLoaded", () => {
                   echarts.init(document.querySelector("#verticalBarChart")).setOption({
                     title: {
-                      text: 'World Population'
+                      text: 'Phương pháp'
                     },
                     tooltip: {
                       trigger: 'axis',
@@ -398,24 +402,23 @@
                     },
                     yAxis: {
                       type: 'category',
-                      data: ['Brazil', 'Indonesia', 'USA', 'India', 'China', 'World']
+                      data: ['Thuốc Đông y', 'Bấm huyệt', 'Vật lý trị liệu', 'Châm cứu']
                     },
                     series: [{
-                        name: '2011',
+                        name: 'Tháng 4',
                         type: 'bar',
-                        data: [18203, 23489, 29034, 104970, 131744, 630230]
+                        data: [67, 50, 53, 90]
                       },
                       {
-                        name: '2012',
+                        name: 'Tháng 5',
                         type: 'bar',
-                        data: [19325, 23438, 31000, 121594, 134141, 681807]
+                        data: [56, 57, 53, 73]
                       }
                     ]
                   });
                 });
               </script>
               <!-- End Vertical Bar Chart -->
-
             </div>
           </div>
         </div>
@@ -426,6 +429,7 @@
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
   <script src="assets/vendor/echarts/echarts.min.js"></script>
 
   <!-- Template Main JS File -->
