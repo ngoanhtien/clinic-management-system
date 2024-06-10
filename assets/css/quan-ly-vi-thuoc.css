@@ -471,7 +471,7 @@ a#logo {
   text-overflow: ellipsis;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 319px) {
   .table-responsive {
     display: block;
     width: 100%;
@@ -481,10 +481,10 @@ a#logo {
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
-#back-to-top {
+.back-to-top {
   position: fixed;
   visibility: hidden;
-  opacity: 0.5;
+  opacity: 0;
   right: 15px;
   bottom: 15px;
   z-index: 99999;
@@ -495,18 +495,18 @@ a#logo {
   transition: all 0.4s;
 }
 
-#back-to-top i {
+.back-to-top i {
   font-size: 24px;
   color: #fff;
   line-height: 0;
 }
 
-#back-to-top:hover {
+.back-to-top:hover {
   background: #6776f4;
   color: #fff;
 }
 
-#back-to-top.active {
+.back-to-top.active {
   visibility: visible;
   opacity: 1;
 }
@@ -579,8 +579,8 @@ th {
   background-color: #3008c2;
 }
 .medicine-image {
-  width: 70px;
-    height: 70px; 
+  width: 100px;
+    height: 100px; 
     object-fit: cover;
     border-radius: 10px; 
     cursor: pointer;
