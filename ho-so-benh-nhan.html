@@ -22,7 +22,11 @@
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/all.min.css">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
 
 </head>
 
@@ -277,663 +281,622 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Thông tin cơ bản</h5>
-              <div class="datatable-wrapper datatable-loading no-footer sortable searchable fixed-columns">
-                <div class="datatable-top">
-                  <div class="datatable-dropdown">
-                    <label>
-                      <select class="datatable-selector">
-                        <option value="5">5</option>
-                        <option value="10" selected="">10</option>
-                        <option value="15">15</option>
-                        <option value="-1">All</option>
-                      </select> entries per page
-                    </label>
-                  </div>
-                  <div class="datatable-search">
-                    <input class="datatable-input" placeholder="Search..." type="search" title="Search within table">
-                  </div>
-                </div>
-                <div class="datatable-container">
-                  <table class="table datatable table-striped">
-                    <thead class="table-primary">
-                      <tr>
-                        <th style="width: 80px;">Mã số</th>
-                        <th>Họ và tên</th>
-                        <th>Tuổi</th>
-                        <th>Giới tính</th>
-                        <th data-type="date" data-format="YYYY-DD-MM">Ngày sinh</th>
-                        <th>SĐT</th>
-                        <th>Sửa/Xóa</th>
-                      </tr>
-                    </thead>
-                    <tbody class="table-group-divider">
-                      <tr data-index="0">
-                        <td>1</td>
-                        <td><a href="#">Nguyễn Văn Long</a></td>
-                        <td>25</td>
-                        <td>Nam</td>
-                        <td>1999-01-01</td>
-                        <td>0912345678</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="1">
-                        <td>2</td>
-                        <td><a href="#">Trần Thị Hạnh</a></td>
-                        <td>30</td>
-                        <td>Nữ</td>
-                        <td>1994-03-15</td>
-                        <td>0912345679</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="2">
-                        <td>3</td>
-                        <td><a href="#">Lê Minh Tuấn</a></td>
-                        <td>35</td>
-                        <td>Nam</td>
-                        <td>1989-05-20</td>
-                        <td>0912345680</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="3">
-                        <td>4</td>
-                        <td><a href="#">Phạm Thu Trang</a></td>
-                        <td>28</td>
-                        <td>Nữ</td>
-                        <td>1996-07-22</td>
-                        <td>0912345681</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="4">
-                        <td>5</td>
-                        <td><a href="#">Ngô Văn Hiếu</a></td>
-                        <td>32</td>
-                        <td>Nam</td>
-                        <td>1992-09-03</td>
-                        <td>0912345682</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="5">
-                        <td>6</td>
-                        <td><a href="#">Hoàng Thị Linh</a></td>
-                        <td>26</td>
-                        <td>Nữ</td>
-                        <td>1998-11-14</td>
-                        <td>0912345683</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="6">
-                        <td>7</td>
-                        <td><a href="#">Đỗ Văn Phúc</a></td>
-                        <td>29</td>
-                        <td>Nam</td>
-                        <td>1995-02-10</td>
-                        <td>0912345684</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="7">
-                        <td>8</td>
-                        <td><a href="#">Phan Thị Hương</a></td>
-                        <td>31</td>
-                        <td>Nữ</td>
-                        <td>1993-04-18</td>
-                        <td>0912345685</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="8">
-                        <td>9</td>
-                        <td><a href="#">Vũ Văn An</a></td>
-                        <td>27</td>
-                        <td>Nam</td>
-                        <td>1997-06-25</td>
-                        <td>0912345686</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="9">
-                        <td>10</td>
-                        <td><a href="#">Bùi Thị Hằng</a></td>
-                        <td>33</td>
-                        <td>Nữ</td>
-                        <td>1991-08-30</td>
-                        <td>0912345687</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="10">
-                        <td>11</td>
-                        <td><a href="#">Nguyễn Văn Khoa</a></td>
-                        <td>24</td>
-                        <td>Nam</td>
-                        <td>2000-10-15</td>
-                        <td>0912345688</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="11">
-                        <td>12</td>
-                        <td><a href="#">Trần Thị Mai</a></td>
-                        <td>36</td>
-                        <td>Nữ</td>
-                        <td>1988-12-22</td>
-                        <td>0912345689</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="12">
-                        <td>13</td>
-                        <td><a href="#">Lê Quang Dũng</a></td>
-                        <td>34</td>
-                        <td>Nam</td>
-                        <td>1990-02-05</td>
-                        <td>0912345690</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="13">
-                        <td>14</td>
-                        <td><a href="#">Phạm Thị Lan</a></td>
-                        <td>28</td>
-                        <td>Nữ</td>
-                        <td>1996-04-17</td>
-                        <td>0912345691</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="14">
-                        <td>15</td>
-                        <td><a href="#">Ngô Minh Hoàng</a></td>
-                        <td>29</td>
-                        <td>Nam</td>
-                        <td>1995-06-09</td>
-                        <td>0912345692</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="15">
-                        <td>16</td>
-                        <td><a href="#">Hoàng Thị Phượng</a></td>
-                        <td>31</td>
-                        <td>Nữ</td>
-                        <td>1993-08-22</td>
-                        <td>0912345693</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="16">
-                        <td>17</td>
-                        <td><a href="#">Đỗ Văn Nam</a></td>
-                        <td>30</td>
-                        <td>Nam</td>
-                        <td>1994-01-19</td>
-                        <td>0912345694</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="17">
-                        <td>18</td>
-                        <td><a href="#">Phan Thị Yến</a></td>
-                        <td>27</td>
-                        <td>Nữ</td>
-                        <td>1997-03-05</td>
-                        <td>0912345695</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="18">
-                        <td>19</td>
-                        <td><a href="#">Vũ Hồng Quân</a></td>
-                        <td>28</td>
-                        <td>Nam</td>
-                        <td>1996-05-13</td>
-                        <td>0912345696</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="19">
-                        <td>20</td>
-                        <td><a href="#">Bùi Thị Thảo</a></td>
-                        <td>32</td>
-                        <td>Nữ</td>
-                        <td>1992-07-24</td>
-                        <td>0912345697</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="20">
-                        <td>21</td>
-                        <td><a href="#">Nguyễn Văn Bảo</a></td>
-                        <td>25</td>
-                        <td>Nam</td>
-                        <td>1999-09-12</td>
-                        <td>0912345698</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="21">
-                        <td>22</td>
-                        <td><a href="#">Trần Thị Tâm</a></td>
-                        <td>30</td>
-                        <td>Nữ</td>
-                        <td>1994-11-30</td>
-                        <td>0912345699</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="22">
-                        <td>23</td>
-                        <td><a href="#">Lê Văn Tài</a></td>
-                        <td>34</td>
-                        <td>Nam</td>
-                        <td>1990-01-10</td>
-                        <td>0912345700</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="23">
-                        <td>24</td>
-                        <td><a href="#">Phạm Thị Nhung</a></td>
-                        <td>26</td>
-                        <td>Nữ</td>
-                        <td>1998-03-14</td>
-                        <td>0912345701</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="24">
-                        <td>25</td>
-                        <td><a href="#">Ngô Văn Bình</a></td>
-                        <td>29</td>
-                        <td>Nam</td>
-                        <td>1995-05-17</td>
-                        <td>0912345702</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="25">
-                        <td>26</td>
-                        <td><a href="#">Hoàng Thị Nga</a></td>
-                        <td>27</td>
-                        <td>Nữ</td>
-                        <td>1997-07-29</td>
-                        <td>0912345703</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="26">
-                        <td>27</td>
-                        <td><a href="#">Đỗ Văn Lợi</a></td>
-                        <td>33</td>
-                        <td>Nam</td>
-                        <td>1991-09-01</td>
-                        <td>0912345704</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="27">
-                        <td>28</td>
-                        <td><a href="#">Phan Thị Ngọc</a></td>
-                        <td>31</td>
-                        <td>Nữ</td>
-                        <td>1993-11-03</td>
-                        <td>0912345705</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="28">
-                        <td>29</td>
-                        <td><a href="#">Vũ Văn Đạt</a></td>
-                        <td>28</td>
-                        <td>Nam</td>
-                        <td>1996-02-21</td>
-                        <td>0912345706</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="29">
-                        <td>30</td>
-                        <td><a href="#">Bùi Thị Lan</a></td>
-                        <td>32</td>
-                        <td>Nữ</td>
-                        <td>1992-04-26</td>
-                        <td>0912345707</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="30">
-                        <td>31</td>
-                        <td><a href="#">Nguyễn Văn Sơn</a></td>
-                        <td>29</td>
-                        <td>Nam</td>
-                        <td>1995-06-18</td>
-                        <td>0912345708</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="31">
-                        <td>32</td>
-                        <td><a href="#">Trần Thị Thủy</a></td>
-                        <td>27</td>
-                        <td>Nữ</td>
-                        <td>1997-08-27</td>
-                        <td>0912345709</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="32">
-                        <td>33</td>
-                        <td><a href="#">Lê Văn Khải</a></td>
-                        <td>34</td>
-                        <td>Nam</td>
-                        <td>1990-10-09</td>
-                        <td>0912345710</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="33">
-                        <td>34</td>
-                        <td><a href="#">Phạm Thị Oanh</a></td>
-                        <td>28</td>
-                        <td>Nữ</td>
-                        <td>1996-12-05</td>
-                        <td>0912345711</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="34">
-                        <td>35</td>
-                        <td><a href="#">Ngô Minh Hùng</a></td>
-                        <td>31</td>
-                        <td>Nam</td>
-                        <td>1993-01-11</td>
-                        <td>0912345712</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="35">
-                        <td>36</td>
-                        <td><a href="#">Hoàng Thị Diễm</a></td>
-                        <td>26</td>
-                        <td>Nữ</td>
-                        <td>1998-03-19</td>
-                        <td>0912345713</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="36">
-                        <td>37</td>
-                        <td><a href="#">Đỗ Văn Tùng</a></td>
-                        <td>30</td>
-                        <td>Nam</td>
-                        <td>1994-05-23</td>
-                        <td>0912345714</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="37">
-                        <td>38</td>
-                        <td><a href="#">Phan Thị Hồng</a></td>
-                        <td>27</td>
-                        <td>Nữ</td>
-                        <td>1997-07-14</td>
-                        <td>0912345715</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="38">
-                        <td>39</td>
-                        <td><a href="#">Vũ Văn Hải</a></td>
-                        <td>32</td>
-                        <td>Nam</td>
-                        <td>1992-09-17</td>
-                        <td>0912345716</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="39">
-                        <td>40</td>
-                        <td><a href="#">Bùi Thị Vân</a></td>
-                        <td>28</td>
-                        <td>Nữ</td>
-                        <td>1996-11-08</td>
-                        <td>0912345717</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="40">
-                        <td>41</td>
-                        <td><a href="#">Nguyễn Văn Phong</a></td>
-                        <td>25</td>
-                        <td>Nam</td>
-                        <td>1999-01-24</td>
-                        <td>0912345718</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="41">
-                        <td>42</td>
-                        <td><a href="#">Trần Thị Thắm</a></td>
-                        <td>30</td>
-                        <td>Nữ</td>
-                        <td>1994-03-06</td>
-                        <td>0912345719</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="42">
-                        <td>43</td>
-                        <td><a href="#">Lê Văn Hà</a></td>
-                        <td>35</td>
-                        <td>Nam</td>
-                        <td>1989-05-11</td>
-                        <td>0912345720</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="43">
-                        <td>44</td>
-                        <td><a href="#">Phạm Thị Quyên</a></td>
-                        <td>26</td>
-                        <td>Nữ</td>
-                        <td>1998-07-30</td>
-                        <td>0912345721</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="44">
-                        <td>45</td>
-                        <td><a href="#">Ngô Minh Sơn</a></td>
-                        <td>28</td>
-                        <td>Nam</td>
-                        <td>1996-09-12</td>
-                        <td>0912345722</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="45">
-                        <td>46</td>
-                        <td><a href="#">Hoàng Thị Liên</a></td>
-                        <td>32</td>
-                        <td>Nữ</td>
-                        <td>1992-11-25</td>
-                        <td>0912345723</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="46">
-                        <td>47</td>
-                        <td><a href="#">Đỗ Văn Hùng</a></td>
-                        <td>29</td>
-                        <td>Nam</td>
-                        <td>1995-02-18</td>
-                        <td>0912345724</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="47">
-                        <td>48</td>
-                        <td><a href="#">Phan Thị Thanh</a></td>
-                        <td>31</td>
-                        <td>Nữ</td>
-                        <td>1993-04-12</td>
-                        <td>0912345725</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="48">
-                        <td>49</td>
-                        <td><a href="#">Vũ Văn Toàn</a></td>
-                        <td>27</td>
-                        <td>Nam</td>
-                        <td>1997-06-19</td>
-                        <td>0912345726</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                      <tr data-index="49">
-                        <td>50</td>
-                        <td><a href="#">Bùi Thị Nga</a></td>
-                        <td>33</td>
-                        <td>Nữ</td>
-                        <td>1991-08-25</td>
-                        <td>0912345727</td>
-                        <td>
-                          <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i></a>/
-                          <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i></a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="datatable-bottom">
-                  <div class="datatable-info">Showing 1 to 10 of 50 entries</div>
-                  <nav class="datatable-pagination">
-                    <ul class="datatable-pagination-list">
-                      <li class="datatable-pagination-list-item datatable-hidden datatable-disabled"><button
-                          data-page="1" class="datatable-pagination-list-item-link" aria-label="Page 1">‹</button></li>
-                      <li class="datatable-pagination-list-item datatable-active"><button data-page="1"
-                          class="datatable-pagination-list-item-link" aria-label="Page 1">1</button></li>
-                      <li class="datatable-pagination-list-item"><button data-page="2"
-                          class="datatable-pagination-list-item-link" aria-label="Page 2">2</button></li>
-                      <li class="datatable-pagination-list-item"><button data-page="3"
-                          class="datatable-pagination-list-item-link" aria-label="Page 3">3</button></li>
-                      <li class="datatable-pagination-list-item"><button data-page="4"
-                          class="datatable-pagination-list-item-link" aria-label="Page 4">4</button></li>
-                      <li class="datatable-pagination-list-item"><button data-page="5"
-                          class="datatable-pagination-list-item-link" aria-label="Page 5">5</button></li>
-                      <!-- <li class="datatable-pagination-list-item datatable-ellipsis datatable-disabled"><button
-                          class="datatable-pagination-list-item-link">…</button></li> -->
-                      <li class="datatable-pagination-list-item"><button data-page="2"
-                          class="datatable-pagination-list-item-link" aria-label="Page 2">›</button></li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
+              
+              <table class="table datatable table-striped">
+                <thead class="table-primary">
+                  <tr>
+                    <th style="width: 100px;">Mã số</th>
+                    <th>Họ và tên</th>
+                    <th>Tuổi</th>
+                    <th>Giới tính</th>
+                    <th data-type="date" data-format="YYYY-DD-MM">Ngày sinh</th>
+                    <th>SĐT</th>
+                    <th>Sửa/Xóa</th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                  <tr data-index="0">
+                    <td>1</td>
+                    <td><a href="#">Nguyễn Văn Long</a></td>
+                    <td>25</td>
+                    <td>Nam</td>
+                    <td>1999-01-01</td>
+                    <td>0912345678</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="1">
+                    <td>2</td>
+                    <td><a href="#">Trần Thị Hạnh</a></td>
+                    <td>30</td>
+                    <td>Nữ</td>
+                    <td>1994-03-15</td>
+                    <td>0912345679</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="2">
+                    <td>3</td>
+                    <td><a href="#">Lê Minh Tuấn</a></td>
+                    <td>35</td>
+                    <td>Nam</td>
+                    <td>1989-05-20</td>
+                    <td>0912345680</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="3">
+                    <td>4</td>
+                    <td><a href="#">Phạm Thu Trang</a></td>
+                    <td>28</td>
+                    <td>Nữ</td>
+                    <td>1996-07-22</td>
+                    <td>0912345681</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="4">
+                    <td>5</td>
+                    <td><a href="#">Ngô Văn Hiếu</a></td>
+                    <td>32</td>
+                    <td>Nam</td>
+                    <td>1992-09-03</td>
+                    <td>0912345682</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="5">
+                    <td>6</td>
+                    <td><a href="#">Hoàng Thị Linh</a></td>
+                    <td>26</td>
+                    <td>Nữ</td>
+                    <td>1998-11-14</td>
+                    <td>0912345683</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="6">
+                    <td>7</td>
+                    <td><a href="#">Đỗ Văn Phúc</a></td>
+                    <td>29</td>
+                    <td>Nam</td>
+                    <td>1995-02-10</td>
+                    <td>0912345684</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="7">
+                    <td>8</td>
+                    <td><a href="#">Phan Thị Hương</a></td>
+                    <td>31</td>
+                    <td>Nữ</td>
+                    <td>1993-04-18</td>
+                    <td>0912345685</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="8">
+                    <td>9</td>
+                    <td><a href="#">Vũ Văn An</a></td>
+                    <td>27</td>
+                    <td>Nam</td>
+                    <td>1997-06-25</td>
+                    <td>0912345686</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="9">
+                    <td>10</td>
+                    <td><a href="#">Bùi Thị Hằng</a></td>
+                    <td>33</td>
+                    <td>Nữ</td>
+                    <td>1991-08-30</td>
+                    <td>0912345687</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="10">
+                    <td>11</td>
+                    <td><a href="#">Nguyễn Văn Khoa</a></td>
+                    <td>24</td>
+                    <td>Nam</td>
+                    <td>2000-10-15</td>
+                    <td>0912345688</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="11">
+                    <td>12</td>
+                    <td><a href="#">Trần Thị Mai</a></td>
+                    <td>36</td>
+                    <td>Nữ</td>
+                    <td>1988-12-22</td>
+                    <td>0912345689</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="12">
+                    <td>13</td>
+                    <td><a href="#">Lê Quang Dũng</a></td>
+                    <td>34</td>
+                    <td>Nam</td>
+                    <td>1990-02-05</td>
+                    <td>0912345690</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="13">
+                    <td>14</td>
+                    <td><a href="#">Phạm Thị Lan</a></td>
+                    <td>28</td>
+                    <td>Nữ</td>
+                    <td>1996-04-17</td>
+                    <td>0912345691</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="14">
+                    <td>15</td>
+                    <td><a href="#">Ngô Minh Hoàng</a></td>
+                    <td>29</td>
+                    <td>Nam</td>
+                    <td>1995-06-09</td>
+                    <td>0912345692</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="15">
+                    <td>16</td>
+                    <td><a href="#">Hoàng Thị Phượng</a></td>
+                    <td>31</td>
+                    <td>Nữ</td>
+                    <td>1993-08-22</td>
+                    <td>0912345693</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="16">
+                    <td>17</td>
+                    <td><a href="#">Đỗ Văn Nam</a></td>
+                    <td>30</td>
+                    <td>Nam</td>
+                    <td>1994-01-19</td>
+                    <td>0912345694</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="17">
+                    <td>18</td>
+                    <td><a href="#">Phan Thị Yến</a></td>
+                    <td>27</td>
+                    <td>Nữ</td>
+                    <td>1997-03-05</td>
+                    <td>0912345695</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="18">
+                    <td>19</td>
+                    <td><a href="#">Vũ Hồng Quân</a></td>
+                    <td>28</td>
+                    <td>Nam</td>
+                    <td>1996-05-13</td>
+                    <td>0912345696</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="19">
+                    <td>20</td>
+                    <td><a href="#">Bùi Thị Thảo</a></td>
+                    <td>32</td>
+                    <td>Nữ</td>
+                    <td>1992-07-24</td>
+                    <td>0912345697</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="20">
+                    <td>21</td>
+                    <td><a href="#">Nguyễn Văn Bảo</a></td>
+                    <td>25</td>
+                    <td>Nam</td>
+                    <td>1999-09-12</td>
+                    <td>0912345698</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="21">
+                    <td>22</td>
+                    <td><a href="#">Trần Thị Tâm</a></td>
+                    <td>30</td>
+                    <td>Nữ</td>
+                    <td>1994-11-30</td>
+                    <td>0912345699</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="22">
+                    <td>23</td>
+                    <td><a href="#">Lê Văn Tài</a></td>
+                    <td>34</td>
+                    <td>Nam</td>
+                    <td>1990-01-10</td>
+                    <td>0912345700</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="23">
+                    <td>24</td>
+                    <td><a href="#">Phạm Thị Nhung</a></td>
+                    <td>26</td>
+                    <td>Nữ</td>
+                    <td>1998-03-14</td>
+                    <td>0912345701</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="24">
+                    <td>25</td>
+                    <td><a href="#">Ngô Văn Bình</a></td>
+                    <td>29</td>
+                    <td>Nam</td>
+                    <td>1995-05-17</td>
+                    <td>0912345702</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="25">
+                    <td>26</td>
+                    <td><a href="#">Hoàng Thị Nga</a></td>
+                    <td>27</td>
+                    <td>Nữ</td>
+                    <td>1997-07-29</td>
+                    <td>0912345703</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="26">
+                    <td>27</td>
+                    <td><a href="#">Đỗ Văn Lợi</a></td>
+                    <td>33</td>
+                    <td>Nam</td>
+                    <td>1991-09-01</td>
+                    <td>0912345704</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="27">
+                    <td>28</td>
+                    <td><a href="#">Phan Thị Ngọc</a></td>
+                    <td>31</td>
+                    <td>Nữ</td>
+                    <td>1993-11-03</td>
+                    <td>0912345705</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="28">
+                    <td>29</td>
+                    <td><a href="#">Vũ Văn Đạt</a></td>
+                    <td>28</td>
+                    <td>Nam</td>
+                    <td>1996-02-21</td>
+                    <td>0912345706</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="29">
+                    <td>30</td>
+                    <td><a href="#">Bùi Thị Lan</a></td>
+                    <td>32</td>
+                    <td>Nữ</td>
+                    <td>1992-04-26</td>
+                    <td>0912345707</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="30">
+                    <td>31</td>
+                    <td><a href="#">Nguyễn Văn Sơn</a></td>
+                    <td>29</td>
+                    <td>Nam</td>
+                    <td>1995-06-18</td>
+                    <td>0912345708</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="31">
+                    <td>32</td>
+                    <td><a href="#">Trần Thị Thủy</a></td>
+                    <td>27</td>
+                    <td>Nữ</td>
+                    <td>1997-08-27</td>
+                    <td>0912345709</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="32">
+                    <td>33</td>
+                    <td><a href="#">Lê Văn Khải</a></td>
+                    <td>34</td>
+                    <td>Nam</td>
+                    <td>1990-10-09</td>
+                    <td>0912345710</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="33">
+                    <td>34</td>
+                    <td><a href="#">Phạm Thị Oanh</a></td>
+                    <td>28</td>
+                    <td>Nữ</td>
+                    <td>1996-12-05</td>
+                    <td>0912345711</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="34">
+                    <td>35</td>
+                    <td><a href="#">Ngô Minh Hùng</a></td>
+                    <td>31</td>
+                    <td>Nam</td>
+                    <td>1993-01-11</td>
+                    <td>0912345712</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="35">
+                    <td>36</td>
+                    <td><a href="#">Hoàng Thị Diễm</a></td>
+                    <td>26</td>
+                    <td>Nữ</td>
+                    <td>1998-03-19</td>
+                    <td>0912345713</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="36">
+                    <td>37</td>
+                    <td><a href="#">Đỗ Văn Tùng</a></td>
+                    <td>30</td>
+                    <td>Nam</td>
+                    <td>1994-05-23</td>
+                    <td>0912345714</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="37">
+                    <td>38</td>
+                    <td><a href="#">Phan Thị Hồng</a></td>
+                    <td>27</td>
+                    <td>Nữ</td>
+                    <td>1997-07-14</td>
+                    <td>0912345715</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="38">
+                    <td>39</td>
+                    <td><a href="#">Vũ Văn Hải</a></td>
+                    <td>32</td>
+                    <td>Nam</td>
+                    <td>1992-09-17</td>
+                    <td>0912345716</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="39">
+                    <td>40</td>
+                    <td><a href="#">Bùi Thị Vân</a></td>
+                    <td>28</td>
+                    <td>Nữ</td>
+                    <td>1996-11-08</td>
+                    <td>0912345717</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="40">
+                    <td>41</td>
+                    <td><a href="#">Nguyễn Văn Phong</a></td>
+                    <td>25</td>
+                    <td>Nam</td>
+                    <td>1999-01-24</td>
+                    <td>0912345718</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="41">
+                    <td>42</td>
+                    <td><a href="#">Trần Thị Thắm</a></td>
+                    <td>30</td>
+                    <td>Nữ</td>
+                    <td>1994-03-06</td>
+                    <td>0912345719</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="42">
+                    <td>43</td>
+                    <td><a href="#">Lê Văn Hà</a></td>
+                    <td>35</td>
+                    <td>Nam</td>
+                    <td>1989-05-11</td>
+                    <td>0912345720</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="43">
+                    <td>44</td>
+                    <td><a href="#">Phạm Thị Quyên</a></td>
+                    <td>26</td>
+                    <td>Nữ</td>
+                    <td>1998-07-30</td>
+                    <td>0912345721</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="44">
+                    <td>45</td>
+                    <td><a href="#">Ngô Minh Sơn</a></td>
+                    <td>28</td>
+                    <td>Nam</td>
+                    <td>1996-09-12</td>
+                    <td>0912345722</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="45">
+                    <td>46</td>
+                    <td><a href="#">Hoàng Thị Liên</a></td>
+                    <td>32</td>
+                    <td>Nữ</td>
+                    <td>1992-11-25</td>
+                    <td>0912345723</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="46">
+                    <td>47</td>
+                    <td><a href="#">Đỗ Văn Hùng</a></td>
+                    <td>29</td>
+                    <td>Nam</td>
+                    <td>1995-02-18</td>
+                    <td>0912345724</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="47">
+                    <td>48</td>
+                    <td><a href="#">Phan Thị Thanh</a></td>
+                    <td>31</td>
+                    <td>Nữ</td>
+                    <td>1993-04-12</td>
+                    <td>0912345725</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="48">
+                    <td>49</td>
+                    <td><a href="#">Vũ Văn Toàn</a></td>
+                    <td>27</td>
+                    <td>Nam</td>
+                    <td>1997-06-19</td>
+                    <td>0912345726</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                  <tr data-index="49">
+                    <td>50</td>
+                    <td><a href="#">Bùi Thị Nga</a></td>
+                    <td>33</td>
+                    <td>Nữ</td>
+                    <td>1991-08-25</td>
+                    <td>0912345727</td>
+                    <td>
+                      <a href="sua-benh-nhan.html"><i class="fa-regular fa-pen-to-square"></i>Sửa </a>/
+                      <a href="xoa-benh-nhan.html"><i class="fa-regular fa-trash-can"></i> Xóa</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -944,7 +907,11 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>\
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
 
   <script src="assets/js/main.js"></script>
 
