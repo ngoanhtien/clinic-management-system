@@ -365,15 +365,22 @@ h6 {
 }
 
 .logo img {
-  max-height: 26px;
+  max-height: 46px;
   margin-right: 6px;
+  margin-left: 6px;
 }
 
 .logo span {
-  font-size: 26px;
+  font-size: 36px;
   font-weight: 700;
   color: #012970;
   /* font-family: "Nunito", sans-serif; */
+}
+
+.protest-revolution-regular {
+  font-family: "Protest Revolution", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .header {

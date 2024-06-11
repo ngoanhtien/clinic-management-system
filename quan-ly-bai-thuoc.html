@@ -8,9 +8,14 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
+    <!-- Favicons -->
+    <link href="assets/img/logo1.jpg" rel="icon">
+    <link href="assets/img/logo1.jpg" rel="apple-touch-icon">
+
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
     rel="stylesheet">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -270,7 +275,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link" href="admin.html">
+        <a class="nav-link collapsed" href="admin.html">
           <i class="bi bi-grid"></i>
           <span>Trang chủ</span>
         </a>
@@ -309,28 +314,28 @@
       <li class="nav-heading">Pages</li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="users-profile.html">
+        <a class="nav-link collapsed" href="thong-tin-ca-nhan.html">
           <i class="bi bi-person"></i>
           <span>Thông tin cá nhân</span>
         </a>
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-register.html">
+        <a class="nav-link collapsed" href="dang-ky.html">
           <i class="bi bi-card-list"></i>
           <span>Đăng ký</span>
         </a>
       </li><!-- End Register Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-login.html">
+        <a class="nav-link collapsed" href="dang-nhap.html">
           <i class="bi bi-box-arrow-in-right"></i>
           <span>Đăng nhập</span>
         </a>
       </li><!-- End Login Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-error-404.html">
+        <a class="nav-link collapsed" href="error-404.html">
           <i class="bi bi-dash-circle"></i>
           <span>Lỗi 404</span>
         </a>
@@ -370,15 +375,17 @@
                     <option value="all">All</option>
                     <option value="5">5</option>
                     <option value="10">10</option>
-                    <option value="20">20</option>                  
+                    <option value="20">20</option>
                   </select>
                 </div>
                 <div class="col-md-6 text-end">
-                  <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addMedicineModal">Thêm vị thuốc</button>
+                  <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addMedicineModal">Thêm vị
+                    thuốc</button>
                 </div>
               </div>
 
-              <table class="table table-responsive table-hover table-striped" style="text-align: center; vertical-align: middle;">
+              <table class="table table-responsive table-hover table-striped"
+                style="text-align: center; vertical-align: middle;">
                 <thead>
                   <tr>
                     <th scope="col" onclick="sortTable(0)">STT</th>
@@ -404,7 +411,8 @@
                 </div>
               </div>
               <!-- View Medicine Modal -->
-              <div class="modal fade" id="viewMedicineModal" tabindex="-1" aria-labelledby="viewMedicineModalLabel" aria-hidden="true">
+              <div class="modal fade" id="viewMedicineModal" tabindex="-1" aria-labelledby="viewMedicineModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -413,9 +421,11 @@
                     </div>
                     <div class="modal-body">
                       <h4 id="viewMedicineName"></h4>
-                      <img id="viewMedicineImage" src="" alt="Medicine Image" class="img-fluid"><br/>
-                      <b >Mô tả:</b><p id="viewMedicineDescription" class="mt-1"></p>
-                      <b >Liều dùng:</b><p id="viewMedicineUsage" class="mt-1"></p>
+                      <img id="viewMedicineImage" src="" alt="Medicine Image" class="img-fluid"><br />
+                      <b>Mô tả:</b>
+                      <p id="viewMedicineDescription" class="mt-1"></p>
+                      <b>Liều dùng:</b>
+                      <p id="viewMedicineUsage" class="mt-1"></p>
                       <b>Thành phần:</b>
                       <ul id="viewMedicineIngredients" class="mt-1"></ul> <!-- Added to display ingredients -->
                     </div>
@@ -426,7 +436,8 @@
                 </div>
               </div>
               <!-- Add Medicine Modal -->
-              <div class="modal fade" id="addMedicineModal" tabindex="-1" aria-labelledby="addMedicineModalLabel" aria-hidden="true">
+              <div class="modal fade" id="addMedicineModal" tabindex="-1" aria-labelledby="addMedicineModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog modal-xl">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -436,27 +447,33 @@
                     <div class="modal-body">
                       <form id="addMedicineForm">
                         <div class="mb-2">
-                          <label for="medicineName" class="form-label"><b>Tên bài thuốc</b> <i class="text-danger">*</i></label>
+                          <label for="medicineName" class="form-label"><b>Tên bài thuốc</b> <i
+                              class="text-danger">*</i></label>
                           <input type="text" class="form-control" id="medicineName" required>
                         </div>
                         <div class="mb-2">
-                          <label for="medicinePrice" class="form-label"><b>Đơn giá (VND)</b> <i class="text-danger">*</i></label>
+                          <label for="medicinePrice" class="form-label"><b>Đơn giá (VND)</b> <i
+                              class="text-danger">*</i></label>
                           <input type="number" class="form-control" id="medicinePrice" required>
                         </div>
                         <div class="mb-2">
-                          <label for="medicineDate" class="form-label"><b>Ngày tạo </b><i class="text-danger">*</i></label>
+                          <label for="medicineDate" class="form-label"><b>Ngày tạo </b><i
+                              class="text-danger">*</i></label>
                           <input type="date" class="form-control" id="medicineDate" required>
                         </div>
                         <div class="mb-2">
-                          <label for="medicineImage" class="form-label"><b>Hình ảnh </b><i class="text-danger">*</i></label>
+                          <label for="medicineImage" class="form-label"><b>Hình ảnh </b><i
+                              class="text-danger">*</i></label>
                           <input type="file" class="form-control" id="medicineImage" accept="image/*" required>
                         </div>
                         <div class="mb-2">
-                          <label for="medicineDescription" class="form-label"><b>Mô tả </b><i class="text-danger">*</i></label>
+                          <label for="medicineDescription" class="form-label"><b>Mô tả </b><i
+                              class="text-danger">*</i></label>
                           <textarea class="form-control" id="medicineDescription" rows="5" required></textarea>
                         </div>
                         <div class="mb-2">
-                          <label for="medicineUsage" class="form-label"><b>Liều dùng </b><i class="text-danger">*</i></label>
+                          <label for="medicineUsage" class="form-label"><b>Liều dùng </b><i
+                              class="text-danger">*</i></label>
                           <textarea class="form-control" id="medicineUsage" rows="5" required></textarea>
                         </div>
 
@@ -464,20 +481,21 @@
                         <div class="mb-2">
                           <label for="addMedicineIngredients" class="form-label"><b>Thành phần</b></label>
                           <div id="addMedicineIngredients"></div> <!-- Container for dynamic ingredient inputs -->
-                          <button type="button" class="btn btn-primary mt-2" id="addIngredientButton">Thêm thành phần</button>
+                          <button type="button" class="btn btn-primary mt-2" id="addIngredientButton">Thêm thành
+                            phần</button>
                         </div>
 
                         <div class="container">
                           <div class="row justify-content-center">
-                              <div class="col-auto">
-                                  <button type="submit" class="btn btn-success">Lưu lại</button>
-                              </div>
-                              <div class="col-auto">
-                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Quay lại</button>
-                              </div>
+                            <div class="col-auto">
+                              <button type="submit" class="btn btn-success">Lưu lại</button>
+                            </div>
+                            <div class="col-auto">
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Quay lại</button>
+                            </div>
                           </div>
-                      </div>
-                      
+                        </div>
+
                       </form>
                     </div>
                   </div>
@@ -486,7 +504,8 @@
               <!-- End Add Medicine Modal -->
 
               <!-- Edit Medicine Modal -->
-              <div class="modal fade" id="editMedicineModal" tabindex="-1" aria-labelledby="editMedicineModalLabel" aria-hidden="true">
+              <div class="modal fade" id="editMedicineModal" tabindex="-1" aria-labelledby="editMedicineModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog modal-xl">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -497,47 +516,56 @@
                       <form id="editMedicineForm">
                         <input type="hidden" id="editMedicineId">
                         <div class="mb-2">
-                          <label for="editMedicineName" class="form-label"><b>Tên bài thuốc</b> <i class="text-danger">*</i></label>
+                          <label for="editMedicineName" class="form-label"><b>Tên bài thuốc</b> <i
+                              class="text-danger">*</i></label>
                           <input type="text" class="form-control" id="editMedicineName" required>
                         </div>
                         <div class="mb-2">
-                          <label for="editMedicinePrice" class="form-label"><b>Đơn giá (VND)</b> <i class="text-danger">*</i></label>
+                          <label for="editMedicinePrice" class="form-label"><b>Đơn giá (VND)</b> <i
+                              class="text-danger">*</i></label>
                           <input type="number" class="form-control" id="editMedicinePrice" required>
                         </div>
                         <div class="mb-2">
-                          <label for="editMedicineDate" class="form-label"><b>Ngày tạo</b> <i class="text-danger">*</i></label>
+                          <label for="editMedicineDate" class="form-label"><b>Ngày tạo</b> <i
+                              class="text-danger">*</i></label>
                           <input type="date" class="form-control" id="editMedicineDate" required>
                         </div>
                         <div class="mb-2">
-                          <label for="editMedicineImage" class="form-label"><b>Hình ảnh</b> <i class="text-danger">*</i></label>
+                          <label for="editMedicineImage" class="form-label"><b>Hình ảnh</b> <i
+                              class="text-danger">*</i></label>
                           <input type="file" class="form-control" id="editMedicineImage" accept="image/*">
                         </div>
                         <div class="mb-2">
-                          <label for="editMedicineDescription" class="form-label"><b>Mô tả </b><i class="text-danger">*</i></label>
+                          <label for="editMedicineDescription" class="form-label"><b>Mô tả </b><i
+                              class="text-danger">*</i></label>
                           <textarea class="form-control" id="editMedicineDescription" rows="5" required></textarea>
                         </div>
                         <div class="mb-2">
-                          <label for="editMedicineUsage" class="form-label"><b>Liều dùng </b><i class="text-danger">*</i></label>
+                          <label for="editMedicineUsage" class="form-label"><b>Liều dùng </b><i
+                              class="text-danger">*</i></label>
                           <textarea class="form-control" id="editMedicineUsage" rows="5" required></textarea>
                         </div>
-                          <!--ingredient detail-->  
+                        <!--ingredient detail-->
                         <div class="mb-2">
-                          <label for="editMedicineIngredients" class="form-label"><b class="text-center d-block">Thành phần</b></label>
+                          <label for="editMedicineIngredients" class="form-label"><b class="text-center d-block">Thành
+                              phần</b></label>
                           <div id="editMedicineIngredients"></div> <!-- Container for dynamic ingredient inputs -->
                         </div>
-                        <button type="button" class="btn btn-primary mt-1" id="addNewIngredient">Thêm thành phần</button>
+                        <button type="button" class="btn btn-primary mt-1" id="addNewIngredient">Thêm thành
+                          phần</button>
                         <div class="mb-2">
-                        <div class="container">
-                          <div class="row justify-content-center">
+                          <div class="container">
+                            <div class="row justify-content-center">
                               <div class="col-auto">
-                                  <button type="submit" class="btn btn-success" >Lưu lại</button>
+                                <button type="submit" class="btn btn-success">Lưu lại</button>
                               </div>
                               <div class="col-auto">
-                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Quay lại</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Quay
+                                  lại</button>
                               </div>
+                            </div>
                           </div>
-                      </div>
-                      
+
                       </form>
                     </div>
                   </div>
@@ -556,6 +584,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
