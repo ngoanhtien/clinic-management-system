@@ -772,6 +772,8 @@ renderPagination(totalPages, 1);
 
 })();
 
+
+
 /* SORT FAIL
   function sortTable(columnIndex) {
     const tableBody = document.getElementById('medicineTable');

@@ -478,6 +478,18 @@ a#logo {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
+}
+.pagetitle {
+  margin-bottom: 10px;
+}
+
+.pagetitle h1 {
+  font-size: 24px;
+  margin-bottom: 0;
+  font-weight: 600;
+  color: #012970;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -509,33 +521,6 @@ a#logo {
 .back-to-top.active {
   visibility: visible;
   opacity: 1;
-}
-
-  .table thead {
-    display: none;
-  }
-
-  .table tr {
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  .table td {
-    display: flex;
-    justify-content: space-between;
-    border: 0;
-    padding-left: 50%;
-    position: relative;
-  }
-
-  .table td:before {
-    content: attr(data-label);
-    position: absolute;
-    left: 0;
-    width: 45%;
-    padding-right: 10px;
-    white-space: nowrap;
-  }
 }
 /* table*****************************/
 .pagination {
